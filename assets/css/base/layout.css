@@ -1,37 +1,78 @@
 /*공통 구조 정의*/
 
+/*전역 레이아웃*/
 body{
     /* layout context */
     display: flex;
     /* alignment */
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    min-height: 100vh; /*푸터를 바닥으로*/
+    background-color: var(--color-bg-base);
+    font-family: var(--font-base);
 }
 
-/*주요 내용 정렬*/
+/*중앙 정렬*/
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
+    padding: var(--container-padding);
+    width: 100%;
+    box-sizing: border-box;
 }
+
+/*구역별*/
 
 header {
     width: 100%;
     background-color: var(--color-bg-base);
     border-bottom: 1px solid var(--color-bg-secondary);
+    padding: 2.2rem 0;
 }
 
-main {
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*요소 분산*/
+}
+
+/*본문*/
+.main-content {
+    flex: 1; /*본문이 화면 공간 차지, 푸터 위치 잡기*/
     width: 100%;
-    background-color: var(--color-bg-base);
     padding-top: var(--space-lg);
     padding-bottom: var(--space-xl);
 }
 
-footer {
+/*배너*/
+.main-visual {
     width: 100%;
+    height: 50.0rem;
     background-color: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 열 구조*/
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+    padding: 6.0rem 0;
+}
+
+/*웹 접근성*/
+.ir {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
