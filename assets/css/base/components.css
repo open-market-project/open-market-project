@@ -1,0 +1,68 @@
+/*공통 ui 정의, 공통 인터랙션 버튼 제작*/
+
+.search-form {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-base);
+}
+
+.btn-search {
+    cursor: pointer;
+    transition: filter 0.2s ease; /*부드러운*/
+}
+
+.btn-search:hover {
+    filter: var(--icon-filter-hover);
+}
+
+.btn-prev, .btn-next {
+    cursor: pointer;
+    background-color: transparent;
+    transition: filter 0.2s ease;
+}
+
+/*배너*/
+.btn-prev:hover, .btn-next:hover {
+    filter: var(--icon-filter-hover); /*화살표 아이콘 호버 효과*/
+}
+
+.pagination li {
+    border-radius: 50%;
+    background-color: var(--color-bg-base);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/*활성화된 페이지 점 스타일*/
+.pagination li.on {
+    background-color: var(--color-text-base); /*활성화된 점은 검은색*/
+}
+
+.product-card {
+    cursor: pointer;
+    transition: transform 0.2s ease; /*카드 리프트*/
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /*마우스 올리면 카드가 살짝 올라감*/
+}
+
+.product-img {
+    border-radius: var(--radius-md); 
+    border: 1px solid var(--color-bg-secondary);
+}
+
+.product-info .seller {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.product-info .product-name {
+    font-size: var(--fs-md);
+    color: var(--color-text-base);
+}
+
+.product-info .price {
+    font-size: var(--fs-xl); 
+    font-weight: var(--fw-bold);
+}

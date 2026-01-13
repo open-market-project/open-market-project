@@ -56,9 +56,6 @@ header {
     width: 40.0rem;
     height: 4.6rem;
     padding: 0 2.2rem;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--radius-lg);
-    background-color: var(--color-bg-base);
 }
 
 .search-form input {
@@ -71,7 +68,6 @@ header {
 .btn-search {
     background: none;
     border: none;
-    cursor: pointer;
     padding: 0;
 }
 
@@ -126,11 +122,9 @@ header {
     transform: translateY(-50%);
     width: 6.0rem;
     height: 12.4rem;
-    background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     border: none;
-    cursor: pointer;
     z-index: 10;
 }
 
@@ -157,14 +151,6 @@ header {
 .pagination li {
     width: 0.6rem;
     height: 0.6rem;
-    border-radius: 50%;
-    background-color: var(--color-bg-base);
-    cursor: pointer;
-}
-
-/* 활성화된 페이지 점 스타일 */
-.pagination li.on {
-    background-color: var(--color-text-base); /* 활성화된 점은 검은색 */
 }
 
 /*상품*/
@@ -185,8 +171,6 @@ header {
     width: 100%;
     aspect-ratio: 1 / 1; /* 정사각형 유지 */
     overflow: hidden;
-    border-radius: var(--radius-md); /* 1.8rem */
-    border: 1px solid var(--color-bg-secondary);
 }
 
 .product-img img {
@@ -195,21 +179,9 @@ header {
     object-fit: cover;
 }
 
-.product-info .seller {
-    font-size: var(--fs-sm);
-    color: var(--color-text-muted);
-}
-
 .product-info .product-name {
-    font-size: var(--fs-md);
     margin: 0.5rem 0;
     line-height: 1.4;
-    color: var(--color-text-base);
-}
-
-.product-info .price {
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-bold);
 }
 
 .footer {
