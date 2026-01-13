@@ -1,0 +1,37 @@
+/*공통 구조 정의*/
+
+body{
+    /* layout context */
+    display: flex;
+    /* alignment */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/*주요 내용 정렬*/
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+header {
+    width: 100%;
+    background-color: var(--color-bg-base);
+    border-bottom: 1px solid var(--color-bg-secondary);
+}
+
+main {
+    width: 100%;
+    background-color: var(--color-bg-base);
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-xl);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+}
+
