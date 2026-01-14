@@ -1,0 +1,203 @@
+/*공통 구조 정의*/
+
+html {
+    font-size: 62.5%; /* 1rem = 10px로 계산하기 편하게 설정 */
+}
+
+/*전역 레이아웃*/
+body{
+    /* layout context */
+    display: flex;
+    /* alignment */
+    flex-direction: column;
+    min-height: 100vh; /*푸터를 바닥으로*/
+    background-color: var(--color-bg-base);
+    color: var(--color-text-base);
+    font-family: var(--font-base);
+}
+
+/*중앙 정렬*/
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color-bg-base);
+    border-bottom: 1px solid var(--color-bg-secondary);
+    padding: 2.0rem 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*요소 분산*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*로고&검색*/
+.logo img {
+    width: 12.4rem;
+    height: 3.8rem;
+    display: block;
+}
+
+.logo-search-group {
+    display: flex;
+    align-items: center;
+    gap: 3.0rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 40.0rem;
+    height: 4.6rem;
+    padding: 0 2.2rem;
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: var(--fs-sm);
+}
+
+.btn-search {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/*돋보기 크기*/
+.btn-search img {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+}
+
+/*메뉴 간격*/
+.user-menu ul {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/*아이콘 텍스트 사이 간격*/
+.user-menu a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-size: var(--fs-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--icon-gap-sm);
+}
+
+/*상단 아이콘 크기*/
+.user-menu .icon {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+}
+
+/*본문*/
+.main-content {
+    flex: 1; /*본문이 화면 공간 차지, 푸터 위치 잡기*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*배너*/
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 50.0rem; 
+    background-color: var(--color-bg-secondary);
+    overflow: hidden;
+}
+
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6.0rem;
+    height: 12.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    z-index: 10;
+}
+
+.btn-prev {
+    left: 0;
+    background-image: var(--icon-swiper-1);
+}
+
+.btn-next {
+    right: 0;
+    background-image: var(--icon-swiper-2);
+}
+
+.pagination {
+    position: absolute;
+    bottom: var(--radius-md);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--icon-gap-md);
+    z-index: 10;
+}
+
+.pagination li {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+/*상품*/
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 열 구조*/
+    gap: var(--space-xl);
+    padding: var(--space-lg) 0;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.product-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 유지 */
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info .product-name {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.footer {
+    background-color: var(--color-bg-secondary);
+    padding: 6.0rem 0;
+}
+
+/*웹 접근성*/
+.ir {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
