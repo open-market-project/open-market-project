@@ -1,0 +1,115 @@
+
+/* ===== establish product detail page styling system ===== */
+.main-content .container {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+}
+
+.product-summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.product-image {
+    width: 60rem;
+    height: 60rem;
+    object-fit: cover;
+    margin-right: 5rem;
+}
+
+.meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 13.8rem;
+}
+
+.product-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.order-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.order-meta_amount {
+    width: 100%;
+    height: 11rem;
+    border-top: 2px solid rgba(196, 196, 196, 1);
+    border-bottom: 2px solid rgba(196, 196, 196, 1);
+    display: flex;
+    align-items: center;
+}
+
+.order-meta_price-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 3.2rem 0 2.2rem;
+}
+
+.price-info-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.1rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.product-info_header {
+    display: flex;
+}
+
+/* ===== apply typography and price display rules for product detail (#2) ===== */
+
+
+.seller {
+    color: var(--color-text-muted);
+    font-size: var(--fs-lg);
+}
+
+.product-name {
+    font-size: var(--fs-xxxl);
+    font-weight: 400;
+}
+
+.L-price {
+    font-size: var(--fs-xxxl);
+    font-weight: bold;
+}
+
+.L-price::after {
+    content: '원';
+    font-size: var(--fs-lg);
+    font-weight: normal;
+    margin-left: 0.2rem;
+}
+
+.quantity {
+    color: var(--color-primary);
+}
+
+.totalAmount,
+.order-meta_devider {
+    color: var(--color-text-muted);
+    font-size: var(--fs-lg);
+}
+
+.order-meta_label {
+    font-size: var(--fs-lg);
+}
+
+#shipping {
+    color: var(--color-text-muted);
+    font-size: var(--fs-md);
+    padding-bottom: 1rem;
+}
