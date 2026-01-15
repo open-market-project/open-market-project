@@ -71,7 +71,6 @@
 
 /* ===== apply typography and price display rules for product detail (#2) ===== */
 
-
 .seller {
     color: var(--color-text-muted);
     font-size: var(--fs-lg);
@@ -112,4 +111,88 @@
     color: var(--color-text-muted);
     font-size: var(--fs-md);
     padding-bottom: 1rem;
+}
+
+/* ===== add reusable quantity selector component styles (#2 ===== */
+
+.amount {
+    width: 15rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 1);
+    border: solid 1px rgba(196, 196, 196, 1);
+    border-radius: 5px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.minus,
+.plus {
+    width: 5rem;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.minus::before,
+.plus::before {
+    width: 2rem;
+    height: 2rem;
+    content:'';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+    transition: opacity .2s, filter .2s;
+}
+
+.minus::before {
+    background-image: url('/assets/images/icon-minus-line.svg');
+}
+
+.plus::before {
+    background-image: url('/assets/images/icon-plus-line.svg');
+}
+
+.minus:hover,
+.plus:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+.minus:active::before {
+    background-image: url('/assets/images/icon-minus-line_disabled.svg');
+}
+
+.plus:active::before {
+    background-image: url('/assets/images/icon-plus-line_disabled.svg');
+}
+
+.current-amount {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px rgba(196, 196, 196, 1);
+    border-left: solid 1px rgba(196, 196, 196, 1);
+    font-family: 'SpoqaHanSansNeo', sans-serif;
+    font-size: 1.8rem;
+}
+
+.minus.is-disabled,
+.plus.is-disabled {
+    pointer-events: none;
+    background-color: rgba(224, 224, 224, 1);
+}
+
+.minus.is-disabled::before {
+    background-image: url('/assets/images/icon-minus-line_disabled.svg');
+}
+
+.plus.is-disabled::before {
+    background-image: url('/assets/images/icon-plus-line_disabled.svg');
 }
