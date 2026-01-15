@@ -17,6 +17,7 @@
     --fs-xs: 1.2rem;
     --fs-sm: 1.4rem;
     --fs-md: 1.6rem;
+    --fs-fixed-lg: 1.8rem;
 
   /* 모바일 포함 */
     --fs-lg: clamp(1.8rem, 4vw, 2.2rem);
