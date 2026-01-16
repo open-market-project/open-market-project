@@ -1,5 +1,5 @@
 .header-signup {
-    padding: 6.0rem 0; 
+    padding: var(--btn-height-main) 0; 
     text-align: center;
     background-color: var(--color-bg-base);
     border-bottom: none;
@@ -7,13 +7,14 @@
 }
 
 .logo-home img {
-    width: 23.0rem;
+    width: var(--logo-size-signup);
     height: auto;
 }
 
 .signup-main {
-    padding-bottom: 3.0rem; 
+    padding-bottom: var(--space-md);
     display: flex;
+    /*가입 상자*/
     justify-content: center;
     background-color: var(--color-bg-base);
 }
@@ -27,16 +28,16 @@
 .signup-tabs {
     display: flex;
     position: relative;
+    /*층 쌓기*/
     z-index: 20; 
 }
 
-/* 1. 탭 버튼: 하단 곡률을 없애고 상단만 둥글게 유지합니다. */
 .signup-tabs button {
     flex: 1;
-    padding: 1.8rem 0 2.5rem;
+    padding: var(--btn-padding-tab-t) 0 var(--btn-padding-tab-b);
     background-color: var(--color-bg-secondary);
     border: 1px solid var(--color-bg-border);
-    border-radius: 1.0rem 1.0rem 0 0; /* 상단 곡률 유지 */
+    border-radius: var(--radius-form) var(--radius-form) 0 0; 
     font-size: var(--fs-fixed-lg);
     font-weight: var(--fw-medium);
     color: var(--color-text-base);
@@ -44,37 +45,35 @@
     z-index: 1; 
 }
 
-/* 2. 활성화된 탭: 컨테이너의 윗선을 가릴 수 있도록 보더 설정을 수정합니다. */
 .signup-tabs button.on {
     background-color: var(--color-bg-base);
-    border-bottom: 1px solid var(--color-bg-base); /* 2px에서 1px로 변경하여 정교하게 가림 */
-    margin-bottom: -1px; /* 컨테이너 보더와 겹치게 설정 */
+    border-bottom: 1px solid var(--color-bg-base); 
+    margin-bottom: -1px; 
     z-index: 15; 
 }
 
-/* 3. 컨테이너: 상단 전체를 직선(0)으로 만들어 탭과 완벽히 밀착시킵니다. */
 .common-info, .seller-info-area {
     background-color: var(--color-bg-base);
     border: 1px solid var(--color-bg-border);
-    /* 기존 0 1.0rem 1.0rem 1.0rem에서 아래와 같이 변경 */
-    border-radius: 0 0 1.0rem 1.0rem; 
-    padding: 3.5rem;
+    border-radius: 0 0 var(--radius-form) var(--radius-form); 
+    padding: var(--space-md);
     position: relative;
     z-index: 10; 
-    margin-top: -1px; /* 탭 보더와 겹쳐서 틈새 제거 */
+    margin-top: -1px; 
 }
 
 label[for="phone-prefix"] {
     display: block; 
-    margin-top: 1.5rem; 
+    margin-top: var(--space-form); 
 }
 
+/*마지막 행*/
 .common-info .input-row:last-of-type {
-    margin-bottom: 1.0rem; 
+    margin-bottom: var(--space-xs); 
 }
 
 .form-footer {
-    padding: 0 3.5rem;
+    padding: 0 var(--space-md);
     padding-top: 0;
 }
 
@@ -82,7 +81,7 @@ label[for="phone-prefix"] {
     position: relative;
     display: block;
     padding-left: 2.6rem;
-    margin-top: 3.0rem;
+    margin-top: var(--space-md);
     margin-bottom: 0;
     cursor: pointer;
 }
@@ -101,6 +100,7 @@ label[for="phone-prefix"] {
     font-size: 1.5rem; 
     color: var(--color-text-muted);
     line-height: 1.6; 
+    /*단어 단위 줄바꿈*/
     word-break: keep-all;
 }
 
@@ -112,8 +112,8 @@ label[for="phone-prefix"] {
 
 .btn-submit-join {
     width: 100%;
-    padding: 1.6rem 0;
-    margin-top: 1.5rem;
+    padding: var(--btn-padding-v) 0;
+    margin-top: var(--space-form);
     font-size: var(--fs-fixed-lg);
     font-weight: var(--fw-bold);
     border-radius: var(--radius-sm);
@@ -121,18 +121,21 @@ label[for="phone-prefix"] {
     color: var(--color-text-inverse);
 }
 
+/*비활성화 상태*/
 .btn-submit-join:disabled {
     background-color: var(--color-bg-border);
 }
 
+/*체크박스 제외 텍스트 입력창*/
 .signup-form input:not([type="checkbox"]), 
 .signup-form select {
     width: 100%;
-    padding: 1.7rem 2.0rem 1.6rem; 
+    padding: 1.7rem var(--space-md) 1.6rem;
     line-height: normal; 
     border: 1px solid var(--color-bg-border);
     border-radius: var(--radius-sm);
     font-size: var(--fs-md);
+    /*box 크기 고정*/
     box-sizing: border-box;
 }
 
@@ -140,13 +143,13 @@ label[for="phone-prefix"] {
     display: block;
     font-size: var(--fs-md);
     color: var(--color-text-muted);
-    margin-bottom: 1.0rem;
+    margin-bottom: var(--space-xs);
 }
 
 .input-row {
     display: flex;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-form);
 }
 
 .btn-check, .btn-verify {
@@ -154,15 +157,5 @@ label[for="phone-prefix"] {
     background-color: var(--color-primary);
     color: var(--color-text-inverse);
     border-radius: var(--radius-sm);
-    font-size: 1.3rem;
-}
-
-.ir {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    font-size: var(--fs-xs);
 }
