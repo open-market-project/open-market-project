@@ -1,140 +1,151 @@
-/* 1. 기본 스타일 초기화: 지저분한 기본 테두리 제거 */
-.signup-form fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* 2. 로고 중앙 정렬 */
 .header-signup {
-    padding: 10rem 0 3rem; /* 상단 여백 확보 */
-    text-align: center; /* 로고를 중앙으로 */
-    background: none;
-    box-shadow: none;
-    border: none;
+    padding: 6.0rem 0; 
+    text-align: center;
+    background-color: var(--color-bg-base);
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
-.header-signup .logo-home img {
-    width: 23.5rem; /* 시안 기준 로고 크기 */
+.logo-home img {
+    width: 23.8rem;
     height: auto;
 }
 
-/* 3. 전체 레이아웃 중앙 정렬 */
 .signup-main {
+    padding-bottom: 3.0rem; 
     display: flex;
-    justify-content: center; /* 박스를 가로 중앙으로 */
-    padding-bottom: var(--space-xl);
+    justify-content: center;
     background-color: var(--color-bg-base);
 }
 
 .signup-inner {
     width: 100%;
-    max-width: 55.0rem; /* 시안 박스 너비 고정 */
+    max-width: 55.0rem;
+    position: relative;
 }
 
-/* 4. 탭 디자인 (상자 위에 붙어 있는 느낌) */
 .signup-tabs {
     display: flex;
-    margin-bottom: -0.1rem; /* 하단 폼 박스 테두리와 겹치게 */
+    position: relative;
+    z-index: 20; 
 }
 
 .signup-tabs button {
     flex: 1;
-    height: 6.0rem;
-    font-size: var(--fs-lg);
+    padding: 1.8rem 0 2.5rem;
     background-color: var(--color-bg-secondary);
-    border: 0.1rem solid var(--color-bg-border);
-    border-bottom: none;
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    color: var(--color-text-base);
-}
-
-/* 활성화된 탭 스타일 */
-.signup-tabs .tab-buy {
-    background-color: var(--color-bg-base);
-    border-bottom: 0.1rem solid var(--color-bg-base);
-    font-weight: var(--fw-bold);
-    z-index: 10;
-}
-
-/* 5. 통합 폼 박스 (흰색 테두리 상자) */
-.signup-form {
-    padding: 3.5rem;
-    border: 0.1rem solid var(--color-bg-border); /* 구분되는 테두리 추가 */
-    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-    background-color: var(--color-bg-base);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem; /* 요소들 사이의 세로 간격 */
-}
-
-/* 6. 레이블을 위로, 입력창을 아래로 (블럭화) */
-.signup-form label {
-    display: block; /* 줄바꿈 처리하여 입력창 위로 올림 */
-    margin-top: 1.0rem;
-    font-size: var(--fs-md);
-    color: var(--color-text-muted);
-    text-align: left;
-}
-
-.signup-form input, 
-.signup-form select {
-    width: 100%;
-    height: 5.4rem;
-    padding: 0 1.5rem;
-    border: 0.1rem solid var(--color-bg-border);
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    font-size: var(--fs-md);
-}
-
-/* 7. 아이디 행 가로 배치 (입력창 + 중복확인 버튼) */
-.input-row {
-    display: flex;
-    gap: 1.2rem;
-}
-
-.input-row input {
-    flex: 1;
-}
-
-.btn-check {
-    width: 12.0rem;
-    height: 5.4rem;
-    background-color: var(--color-primary); /* 초록색 버튼 */
-    color: var(--color-text-inverse);
-    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-bg-border);
+    border-radius: 1.0rem 1.0rem 0 0; 
+    font-size: var(--fs-fixed-lg);
     font-weight: var(--fw-medium);
+    color: var(--color-text-base);
+    position: relative;
+    z-index: 1; 
 }
 
-/* 8. 판매자 전용 구역 숨기기 (구매회원 모드) */
-.seller-info-area {
-    display: none;
+.signup-tabs button.on {
+    background-color: var(--color-bg-base);
+    border-bottom: 2px solid var(--color-bg-base);
+    margin-bottom: -1px;
+    z-index: 15; 
 }
 
-/* 9. 하단 약관 및 제출 버튼 */
+.common-info, .seller-info-area {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-bg-border);
+    border-radius: 0 1.0rem 1.0rem 1.0rem;
+    padding: 3.5rem;
+    position: relative;
+    z-index: 10; 
+    margin-top: -1px;
+}
+
+label[for="phone-prefix"] {
+    display: block; 
+    margin-top: 1.5rem !important; 
+}
+
+.common-info .input-row:last-of-type {
+    margin-bottom: 1.0rem; 
+}
+
 .form-footer {
-    margin-top: 2.0rem;
-    text-align: center;
+    padding: 0 3.5rem;
+    padding-top: 0;
 }
 
 .check-label {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.0rem;
-    margin-bottom: 3.5rem;
+    align-items: center; 
+    gap: 0.8rem; 
+    margin-top: 3.5rem;
+    margin-bottom: 3.0rem !important;
     cursor: pointer;
+}
+
+.check-label input[type="checkbox"] {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    margin-top: -2px; 
+}
+
+.check-text {
+    font-size: 1.8rem; 
+    color: var(--color-text-muted);
+    line-height: 1.2; 
+}
+
+.check-text a {
+    font-weight: var(--fw-bold);
+    text-decoration: underline;
+    color: var(--color-text-muted);
 }
 
 .btn-submit-join {
     width: 100%;
-    height: 6.0rem;
-    background-color: var(--color-bg-border); /* 초기 비활성화 색상 */
-    color: var(--color-text-inverse);
-    font-size: var(--fs-lg);
+    padding: 1.6rem 0;
+    font-size: var(--fs-fixed-lg);
     font-weight: var(--fw-bold);
     border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.btn-submit-join:disabled {
+    background-color: var(--color-bg-border);
+}
+
+.signup-form input:not([type="checkbox"]), 
+.signup-form select {
+    width: 100%;
+    padding: 1.7rem 2.0rem 1.6rem; 
+    line-height: normal; 
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-md);
+    box-sizing: border-box;
+}
+
+.signup-form label {
+    display: block;
+    font-size: var(--fs-md);
+    color: var(--color-text-muted);
+    margin-bottom: 1.0rem;
+}
+
+.input-row {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-check, .btn-verify {
+    width: 13.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-sm);
+    font-size: 1.3rem;
 }
 
 .ir {
@@ -143,6 +154,6 @@
     height: 1px;
     margin: -1px;
     overflow: hidden;
-    clip-path: inset(50%); /* [수정] 최신 브라우저에서도 확실히 숨김 */
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }

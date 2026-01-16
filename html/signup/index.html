@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="../assets/css/base/variables.css">
-    <link rel="stylesheet" href="../assets/css/base/reset.css">
-    <link rel="stylesheet" href="../assets/css/base/components.css">
-    <link rel="stylesheet" href="../assets/css/base/layout.css">
+    <link rel="stylesheet" href="../../assets/css/base/variables.css">
+    <link rel="stylesheet" href="../../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base/components.css">
+    <link rel="stylesheet" href="../../assets/css/base/layout.css">
     <link rel="stylesheet" href="../../assets/css/pages/signup.css">
   </head>
   <body>
@@ -56,7 +56,7 @@
         </div>
         <p id = "pw-msg" class = "msg-box ir" aria-live = "assertive"></p>
 
-        <label for = "user-pw-check" class = "label-sub">비밀번호 확인</label>
+        <label for = "user-pw-check" class = "label-sub">비밀번호 재확인</label>
         <div class = "input-row">
             <input type = "password" id = "user-pw-check" required aria-describedby="pw-check-msg">
             <span class = "icon-valid-check" aria-hidden="true"></span>
@@ -69,7 +69,7 @@
         autocomplete = "name" aria-describedby = "name-msg">
         <p id = "name-msg" class = "msg-box ir" aria-live = "assertive"></p>
 
-        <label for = "phone-prefix">전화번호</label>
+        <label for = "phone-prefix">휴대폰번호</label>
         <div class = "input-row">
             <select id = "phone-prefix" title = "앞자리 선택">
                 <option value = "010">010</option>
@@ -113,9 +113,9 @@
         <!--disabled = 필수 항목이 채워지지 않을 시 클릭할 수 없는 상태로 만듦-->
         <button type = "submit" class = "btn-submit-join" disabled aria-describedby="submit-help">가입하기</button>
         <p id="submit-help" class="ir">모든 항목을 입력하고 약관에 동의해야 버튼이 활성화됩니다.</p>
-    </footer>
-    </form>
-    </div>
+        </footer>
+       </form>
+      </div>
     </main>
 </body>
 </html>
