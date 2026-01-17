@@ -158,7 +158,7 @@ function eventSetting() {
   });
 
   // 비밀번호 재확인 - 순차 검사 추가
-  DOMElementArray.passwordConfirm.addEventListener("focus", () => {
+  DOMElementArray.passwordConfirm.addEventListener("input", (e) => {
     // 아이디가 비어있으면 에러 표시
     if (!DOMElementArray.userId.value.trim()) {
       showError(DOMElementArray.userId, DOMElementArray.userIdMessage, "필수 정보입니다.");
