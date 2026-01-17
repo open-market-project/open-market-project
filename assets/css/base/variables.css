@@ -42,6 +42,7 @@
   /* background colors */
     --color-bg-primary: #FFFFFF; 
     --color-bg-secondary: #F2F2F2; /*푸터 및 구분 섹션 배경*/
+    --color-bg-disabled: #E0E0E0; /*비활성화 배경*/
     --color-bg-overlay:rgba(0, 0, 0, 0.6); /*뒷배경*/
 
     /*border colors*/
@@ -202,4 +203,12 @@
   /* 11. Legacy (하위 호환성 유지) */
     --space-form: var(--form-gap);
     --form-space-msg: var(--form-msg-gap);
+
+  /* 12 . Detail Page Specific */
+    --detail-page-top: 8.0rem;
+    --detail-section-gap: 14.0rem;
+    --detail-image-gap: 5.0rem;
+    --detail-order-top: 13.8rem;
+    --detail-amount-height: 11.0rem;
+    --detail-btn-gap: 1.4rem;
 }
