@@ -28,10 +28,14 @@ function loadJoinDOM() {
   DOMElementArray.password = document.getElementById("user-pw");
   DOMElementArray.passwordMessage = document.getElementById("pw-msg");
   DOMElementArray.passwordRow = DOMElementArray.password?.closest('.input-row');
+  DOMElementArray.passwordIcon = document.getElementById("pw-check-icon") 
+  || DOMElementArray.passwordRow?.querySelector('.icon-valid-check');
   
   DOMElementArray.passwordConfirm = document.getElementById("user-pw-check");
   DOMElementArray.pwConfirmMessage = document.getElementById("pw-check-msg");
-  DOMElementArray.passwordConfirmRow = DOMElementArray.passwordConfirm?.closest('.input-row');
+  DOMElementArray.passwordConfirmRow = DOMElementArray.passwordConfirm?.closest('.input-row')
+  DOMElementArray.passwordConfirmIcon = document.getElementById("pw-confirm-check-icon") 
+  || DOMElementArray.passwordConfirmRow?.querySelector('.icon-valid-check');
 
   // 개인정보
   DOMElementArray.userName = document.getElementById("user-name");
@@ -121,9 +125,7 @@ function eventSetting() {
     if (DOMElementArray.passwordConfirm.value) {
       DOMElementArray.passwordConfirm.value = "";
       resetError(DOMElementArray.passwordConfirm, DOMElementArray.pwConfirmMessage);
-      if (DOMElementArray.passwordConfirmRow) {
-        DOMElementArray.passwordConfirmRow.classList.remove("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordConfirmIcon, false);
       validationsMapping.passwordConfirm.isCheck = false;
     }
 
@@ -136,9 +138,7 @@ function eventSetting() {
         DOMElementArray.passwordMessage, 
         "8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요."
       );
-      if (DOMElementArray.passwordRow) {
-        DOMElementArray.passwordRow.classList.remove("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordIcon, false);
       validationsMapping.password.isCheck = false;
     } else if (isValid) {
       showSuccess(
@@ -146,28 +146,34 @@ function eventSetting() {
         DOMElementArray.passwordMessage, 
         "사용 가능한 비밀번호입니다."
       );
-      if (DOMElementArray.passwordRow) {
-        DOMElementArray.passwordRow.classList.add("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordIcon, true);
       validationsMapping.password.isCheck = true;
     } else {
       resetError(DOMElementArray.password, DOMElementArray.passwordMessage);
-      if (DOMElementArray.passwordRow) {
-        DOMElementArray.passwordRow.classList.remove("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordIcon, false);
       validationsMapping.password.isCheck = false;
     }
     
     handleInputCheck();
   });
 
+  // 비밀번호 재확인 - 순차 검사 추가
+  DOMElementArray.passwordConfirm.addEventListener("focus", () => {
+    // 아이디가 비어있으면 에러 표시
+    if (!DOMElementArray.userId.value.trim()) {
+      showError(DOMElementArray.userId, DOMElementArray.userIdMessage, "필수 정보입니다.");
+    }
+    // 비밀번호가 비어있으면 에러 표시
+    if (!DOMElementArray.password.value) {
+      showError(DOMElementArray.password, DOMElementArray.passwordMessage, "필수 정보입니다.");
+    }
+  });
+
   // 비밀번호 재확인
   DOMElementArray.passwordConfirm.addEventListener("input", (e) => {
     if (e.target.value === "") {
       resetError(DOMElementArray.passwordConfirm, DOMElementArray.pwConfirmMessage);
-      if (DOMElementArray.passwordConfirmRow) {
-        DOMElementArray.passwordConfirmRow.classList.remove("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordConfirmIcon, false);
       validationsMapping.passwordConfirm.isCheck = false;
     } else if (e.target.value !== DOMElementArray.password.value) {
       showError(
@@ -175,9 +181,7 @@ function eventSetting() {
         DOMElementArray.pwConfirmMessage, 
         "비밀번호가 일치하지 않습니다."
       );
-      if (DOMElementArray.passwordConfirmRow) {
-        DOMElementArray.passwordConfirmRow.classList.remove("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordConfirmIcon, false);
       validationsMapping.passwordConfirm.isCheck = false;
     } else {
       showSuccess(
@@ -185,31 +189,68 @@ function eventSetting() {
         DOMElementArray.pwConfirmMessage, 
         "비밀번호가 일치합니다."
       );
-      if (DOMElementArray.passwordConfirmRow) {
-        DOMElementArray.passwordConfirmRow.classList.add("check-password");
-      }
+      setCheckIcon(DOMElementArray.passwordConfirmIcon, true);
       validationsMapping.passwordConfirm.isCheck = true;
     }
     handleInputCheck();
   });
 
-  // 이름 입력
+  // 이름 입력 - 순차 검사 추가
+  DOMElementArray.userName.addEventListener("focus", () => {
+    if (!DOMElementArray.userId.value.trim()) {
+      showError(DOMElementArray.userId, DOMElementArray.userIdMessage, "필수 정보입니다.");
+    }
+    if (!DOMElementArray.password.value) {
+      showError(DOMElementArray.password, DOMElementArray.passwordMessage, "필수 정보입니다.");
+    }
+    if (!DOMElementArray.passwordConfirm.value) {
+      showError(DOMElementArray.passwordConfirm, DOMElementArray.pwConfirmMessage, "필수 정보입니다.");
+    }
+  });
+
   DOMElementArray.userName.addEventListener("input", () => {
     resetError(DOMElementArray.userName, DOMElementArray.userNameMessage);
     handleInputCheck();
   });
 
-  // 휴대폰번호 입력
+  // 휴대폰번호 입력 - 순차 검사 추가
+  const phoneInputHandler = () => {
+    if (!DOMElementArray.userId.value.trim()) {
+      showError(DOMElementArray.userId, DOMElementArray.userIdMessage, "필수 정보입니다.");
+    }
+    if (!DOMElementArray.password.value) {
+      showError(DOMElementArray.password, DOMElementArray.passwordMessage, "필수 정보입니다.");
+    }
+    if (!DOMElementArray.passwordConfirm.value) {
+      showError(DOMElementArray.passwordConfirm, DOMElementArray.pwConfirmMessage, "필수 정보입니다.");
+    }
+    if (!DOMElementArray.userName.value.trim()) {
+      showError(DOMElementArray.userName, DOMElementArray.userNameMessage, "필수 정보입니다.");
+    }
+  };
+
+  DOMElementArray.phoneMiddle.addEventListener("focus", phoneInputHandler);
+  DOMElementArray.phoneLast.addEventListener("focus", phoneInputHandler);
+
   DOMElementArray.phoneMiddle.addEventListener("input", () => {
+    resetError(null, DOMElementArray.phoneNumberMessage);
     handleInputCheck();
   });
   DOMElementArray.phoneLast.addEventListener("input", () => {
+    resetError(null, DOMElementArray.phoneNumberMessage);
     handleInputCheck();
   });
 
   // 판매자 사업자번호 인증
   DOMElementArray.businessNumberCheckBtn.addEventListener("click", async () => {
     await checkBusinessNumber();
+  });
+
+  // 사업자번호 입력 시 초기화
+  DOMElementArray.businessNumber.addEventListener("input", () => {
+    resetError(DOMElementArray.businessNumber, DOMElementArray.businessNumberMessage);
+    sellerValidationsMapping.businessNumber.isCheck = false;
+    handleInputCheck();
   });
 
   // 판매자 스토어 이름 입력
@@ -242,8 +283,7 @@ function eventSetting() {
     
     if (result.user_type) {
       alert("회원가입이 완료되었습니다!");
-      // 로그인 페이지로 이동 (경로는 프로젝트에 맞게 수정)
-      // location.href = "/html/login/index.html"; 
+      location.href = "../login/index.html"; 
     } else if (result.error) {
       alert(result.error);
     } else {
@@ -258,22 +298,24 @@ function eventSetting() {
 function handleTabChange(type) {
   const isBuyer = type === "buyer";
   
-  // 탭 버튼 스타일 변경
+  // 탭 상태 변경
   DOMElementArray.tabBuyer.classList.toggle("on", isBuyer);
   DOMElementArray.tabSeller.classList.toggle("on", !isBuyer);
+  DOMElementArray.tabBuyer.setAttribute("aria-selected", isBuyer);
+  DOMElementArray.tabSeller.setAttribute("aria-selected", !isBuyer);
   
-  // ARIA 속성 업데이트
-  DOMElementArray.tabBuyer.ariaSelected = isBuyer;
-  DOMElementArray.tabSeller.ariaSelected = !isBuyer;
-
   // 패널 표시/숨김
-  DOMElementArray.buyerPanel.hidden = !isBuyer;
-  DOMElementArray.sellerPanel.hidden = isBuyer;
+  DOMElementArray.joinForm.classList.toggle("seller-mode", !isBuyer);
   
-  // 유저 타입 값 설정
+  // hidden 속성도 함께 제어 (접근성)
+  if (DOMElementArray.sellerPanel) {
+    DOMElementArray.sellerPanel.hidden = isBuyer;
+  }
+  
+  // userType 변경
   DOMElementArray.userType.value = type;
   
-  // 버튼 활성화 상태 재확인
+  // 버튼 상태 재확인
   handleInputCheck();
 }
 
@@ -287,8 +329,9 @@ async function checkUserId() {
     showError(
       DOMElementArray.userId, 
       DOMElementArray.userIdMessage, 
-      "아이디를 입력해주세요."
+      "필수 정보입니다."
     );
+    validationsMapping.userId.isCheck = false;
     DOMElementArray.userId.focus();
     return;
   }
@@ -441,6 +484,7 @@ function validateAllFields() {
 function showError(input, msgEl, text) {
   if (input) {
     input.classList.add("input-error");
+    input.classList.remove("input-success");
   }
   
   if (msgEl) {
@@ -454,6 +498,7 @@ function showError(input, msgEl, text) {
 function showSuccess(input, msgEl, text) {
   if (input) {
     input.classList.remove("input-error");
+    input.classList.add("input-success");
   }
   
   if (msgEl) {
@@ -467,6 +512,7 @@ function showSuccess(input, msgEl, text) {
 function resetError(input, msgEl) {
   if (input) {
     input.classList.remove("input-error");
+    input.classList.remove("input-success");
   }
   
   if (msgEl) {
@@ -477,7 +523,24 @@ function resetError(input, msgEl) {
 }
 
 // ========================================
-// 8. 버튼 활성화 제어
+// 8. 체크 아이콘 제어
+// ========================================
+function setCheckIcon(iconEl, isValid) {
+  if (!iconEl) return;
+  
+  if (isValid) {
+    // icon-check-off.svg -> icon-check-on.svg
+    iconEl.src = iconEl.src.replace('icon-check-off.svg', 'icon-check-on.svg');
+    iconEl.classList.add('valid');
+  } else {
+    // icon-check-on.svg -> icon-check-off.svg
+    iconEl.src = iconEl.src.replace('icon-check-on.svg', 'icon-check-off.svg');
+    iconEl.classList.remove('valid');
+  }
+}
+
+// ========================================
+// 9. 버튼 활성화 제어
 // ========================================
 function handleInputCheck() {
   let isInvalid = false;
@@ -508,7 +571,7 @@ function handleInputCheck() {
 }
 
 // ========================================
-// 9. 가입 API 호출
+// 10. 가입 API 호출
 // ========================================
 async function join() {
   const isSeller = DOMElementArray.userType.value === "seller";
@@ -530,7 +593,7 @@ async function join() {
 }
 
 // ========================================
-// 10. API POST 공통 함수
+// 11. API POST 공통 함수
 // ========================================
 async function postData(url = "", data = {}) {
   try {
@@ -549,7 +612,7 @@ async function postData(url = "", data = {}) {
 }
 
 // ========================================
-// 11. 초기화
+// 12. 초기화
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
   loadJoinDOM();
