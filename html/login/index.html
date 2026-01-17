@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,22 @@
     <link rel="stylesheet" href="../../assets/css/pages/login.css" />
     <title>Login-Page</title>
 </head>
-<body>
-    <h1 class="logo"><img src="../../assets/images/Logo-hodu.svg"></h1>
+<body class="main-content">
+    <h1 class="logo">
+        <a href = "/"><img src="../../assets/images/Logo-hodu.svg" alt="HODU">
+        </a>
+    </h1>
+
     <main class="login-container">
         <h2 class="login-txt">로그인</h2>
         <section class="login-box">
             <form id="loginForm">
                 <div class="input-group">
-                    <input type="text" id="username" placeholder="아이디">
-                    <input type="password" id="password" placeholder="비밀번호">
+                    <input type="text" id="username" class="form-input" placeholder="아이디" required>
+                    <input type="password" id="password" class="form-input" placeholder="비밀번호" required>
                 </div>
-                <p id="errorMessage" class="error-txt"></p>
-                <button type="submit" class="login-btn">로그인</button>
+                <p id="errorMessage" class="error-txt msg-error"></p>
+                <button type="submit" class="login-btn btn btn-primary">로그인</button>
             </form>
         </section>
 
