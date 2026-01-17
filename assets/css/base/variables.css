@@ -226,4 +226,10 @@
     --modal-max-height: 20.0rem;
     --modal-padding: 5.0rem 4.0rem 7.5rem;
     --modal-btn-width: 10.0rem;
+
+ /* 15 . GNB Specific */
+    --gnb-seller-btn-padding: 1.1rem 2.0rem;
+    --gnb-dropdown-width: 13.0rem;
+    --gnb-dropdown-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    --gnb-menu-item-padding: 1.0rem;
 }
