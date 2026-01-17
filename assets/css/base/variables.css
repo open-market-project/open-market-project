@@ -216,8 +216,14 @@
     --detail-btn-gap: 1.4rem;
 
   /* 13 . footer specific */
-  --footer-top-margin: 2.1rem;
-  --footer-link-gap: 1.4rem;
-  --footer-divider-margin: 3.0rem;
-  --footer-info-gap: 1.0rem;
+    --footer-top-margin: 2.1rem;
+    --footer-link-gap: 1.4rem;
+    --footer-divider-margin: 3.0rem;
+    --footer-info-gap: 1.0rem;
+
+  /* 14 . Modal Specific */
+    --modal-width: 36.0rem;
+    --modal-max-height: 20.0rem;
+    --modal-padding: 5.0rem 4.0rem 7.5rem;
+    --modal-btn-width: 10.0rem;
 }
