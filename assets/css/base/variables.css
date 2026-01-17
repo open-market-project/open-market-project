@@ -214,4 +214,10 @@
     --detail-order-top: 13.8rem;
     --detail-amount-height: 11.0rem;
     --detail-btn-gap: 1.4rem;
+
+  /* 13 . footer specific */
+  --footer-top-margin: 2.1rem;
+  --footer-link-gap: 1.4rem;
+  --footer-divider-margin: 3.0rem;
+  --footer-info-gap: 1.0rem;
 }
