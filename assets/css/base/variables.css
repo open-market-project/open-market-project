@@ -103,10 +103,10 @@
     --icon-user-2: url('../../images/icon-user-2.svg');
     --icon-delete: url('../../images/icon-delete.svg');
     --icon-plus: url('../../images/icon-plus.svg');
-    --icon-plus-line: url('../../images/icon-plus-line.svg');
-    --icon-plus-line_disabled: url('../../images//icon-plus-line_disabled.svg');
-    --icon-minus-line: url('../../images/icon-minus-line.svg');
-    --icon-minus-line_disabled: url('../../images/icon-minus-line_disabled.svg');
+    --icon-plus-line: url('/open-market-project/assets/images/icon-plus-line.svg');
+    --icon-plus-line_disabled: url('/open-market-project/assets/images//icon-plus-line_disabled.svg');
+    --icon-minus-line: url('/open-market-project/assets/images/icon-minus-line.svg');
+    --icon-minus-line_disabled: url('/open-market-project/assets/images/icon-minus-line_disabled.svg');
     --icon-img: url('../../images/icon-img.svg');
 
   /* Icon-size 가변 타이포 방식*/
