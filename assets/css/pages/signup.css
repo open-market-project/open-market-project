@@ -257,8 +257,9 @@ input[type="password"] {
     height: 2.2rem;
     pointer-events: none;
     z-index: 10;
-    opacity: 0.3;
+    opacity: 1;
     transition: opacity 0.2s ease;
+    object-fit: contain;
 }
 
 /* 3. 유효성 검사 통과 시 */
