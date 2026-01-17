@@ -154,6 +154,8 @@
     --btn-height-lg: 6.0rem;
 
   /* button size */
+    --btn-height-sm: 5.4rem;
+    --btn-height-md: 6.0rem;
     --btn-min-width: clamp(8.0rem, 15vw, 12.0rem);
     --btn-height-main : clamp(6.0rem, 8vw, 8.0rem); /*강조되는 메인 버튼 사용*/
     --btn-height: clamp(4.0rem, 6vw, 6.0rem); /*호두 기준*/
