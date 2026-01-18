@@ -806,6 +806,20 @@ graph LR
 
 * **로그인 페이지**
 
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/b3c55120-ab2c-4427-8ddb-8982998a4acb" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        로그인 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
 > “본 모듈(auth.js)은 구매자·판매자 회원가입 및 관련 유효성 검증을 위한 API 통신 레이어를 제공한다. 실제 회원가입 UI 및 입력 제어는 별도 페이지 스크립트에서 수행된다.”
 
 ```mermaid
@@ -826,14 +840,26 @@ graph LR
     Res -- 성공 --> Go[Redirect] --> End
     Res -- 실패 --> E2[실패 메시지] --> End
 ```
-<!--figcaption -->
 * 아이디/비밀번호 미입력 및 불일치 시 실시간 **경고 문구(Validation)** 노출.
 * 로그인 실패 시 해당 입력창 자동 **Focus 이벤트** 및 입력값 초기화 처리.
 * 로그인 성공 시 이전 페이지(Redirect)로 자동 이동.
 * 구매자/판매자 탭 분리를 통한 맞춤형 로그인 인터페이스 제공.
 
-<!--figcaption -->
 **회원가입 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/ba7e53b0-2e83-4bc4-9b84-bb7bd007763a" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        회원가입 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “회원가입 UI 로직은 signup.js에서 입력·검증·상태 관리를 담당하고, 실제 회원가입 및 유효성 검증 요청은 auth.js의 공통 API 레이어를 통해 서버와 통신한다. 전체 흐름은 입력 → 검증 → API 호출 → 결과 분기 구조로 구성된다.”
 ```mermaid
 graph LR
@@ -867,6 +893,21 @@ graph LR
 > 상품 정보를 탐색하고 상세 내용을 확인하는 영역입니다.
 
 **상품 목록 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/2a52801b-54c4-4be9-8ef7-61a5382f8307" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        상품목록 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
 > “상품 목록 페이지는 main.js에서 목록 렌더링과 UI 이벤트를 담당하고, 상품 데이터 조회는 productAPI를 통해 서버와 통신한다. 데이터 조회 → 카드 생성 → 사용자 클릭 → 상세 페이지 이동으로 이어지는 좌→우 가로 흐름 구조를 가진다.”
 
 ```mermaid
@@ -893,6 +934,20 @@ graph LR
 
 
 **상품 상세 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/16db792e-20eb-45ef-8905-d9f5d4752b9d" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        상품상세 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “상품 상세 페이지는 detail.js에서 화면 상태·이벤트를 제어하고, 상품 조회·장바구니·주문 생성 요청은 productAPI를 통해 서버와 통신한다. 사용자 입력 → 상태 변경 → API 호출 → 결과 분기 구조로 구성된 가로 흐름이다.”
 
 ```mermaid
@@ -933,6 +988,20 @@ graph LR
 > 전체 페이지에서 일관된 UX를 제공하기 위한 공통 요소입니다.
 
 **GNB (Global Navigation Bar)**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/ffc05245-e61a-4b2b-82d2-c0c3c9716d64" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        헤더
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “GNB는 gnb.js에서 로그인 상태와 사용자 유형을 기준으로 UI를 분기 렌더링하며, 모든 사용자 액션은 로컬 인증 상태(storage)를 기준으로 페이지 이동 또는 모달 노출로 처리된다. 서버 통신 없이 상태 기반으로 동작하는 좌→우 흐름 구조다.”
 
 ```mermaid
@@ -969,6 +1038,20 @@ graph LR
 
 
 **권한 제어 모달 (Modal)**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f03500d8-1be2-4400-8ae6-8af2e9f47f9e" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 푸터
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > 로그인 유도 모달은 외부 트리거에 의해 표시되며, 사용자 선택에 따라 단순 종료 또는 로그인 페이지로 이동하는 좌→우 단일 책임 흐름 구조를 가진다.
 ```mermaid
 graph LR
@@ -999,7 +1082,22 @@ graph LR
 
 
 **마이페이지 드롭다운**
+
+
 > 전역 모달은 외부 트리거에 의해 메시지와 콜백을 주입받아 표시되며, 사용자 선택에 따라 단순 종료 또는 지정된 후속 동작을 실행하는 좌→우 범용 확인 흐름 구조를 가진다.
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/c4692395-fade-4682-b72a-dfde998718bc" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 드롭다운
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
 
 ```mermaid
 graph LR
@@ -1033,6 +1131,20 @@ graph LR
 
 
 * **푸터 (Footer)**
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f03500d8-1be2-4400-8ae6-8af2e9f47f9e" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 푸터
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > 푸터는 모든 링크와 버튼 클릭을 미구현 기능으로 처리하며, 전역 확인 모달을 통해 사용자 선택에 따라 현재 페이지 유지 또는 메인 페이지 이동으로 분기되는 흐름 구조를 가진다.
 
 ```mermaid
@@ -1289,15 +1401,256 @@ Lighthouse를 활용해 산출물의 품질을 자동 검수했다.
 
 ## 6. 협업 중심 트러블슈팅
 
-* Merge Conflict 발생 사례 및 해결 방식
-* 공통 컴포넌트 수정 시 충돌 방지 전략
-* PR 범위 과대 문제 개선 경험
+> 오가니제이션 원본 레포지토리 develop 브랜치 직접 push 이슈
+```mermaid
+graph LR
+    subgraph Bad_Flow [위험: 잘못된 직접 Push 구조]
+        direction LR
+        Local1[Local 작업 공간] -- "Direct Push (금지)" --> UpDevelop1["Upstream / develop (팀 통합)"]
+        UpDevelop1 -.-> Risk[" 검증 불가/안정성 저하"]
+    end
+
+    subgraph Good_Flow [권장: 정상적인 Fork & PR 구조]
+        direction LR
+        UpDevelop2["Upstream / develop"] -- "1. 기준점" --> Local2["Local / feature/*"]
+        Local2 -- "2. Push" --> Origin["Origin (개인 Fork) / feature/*"]
+        Origin -- "3. Pull Request" --> PR{4. 검수 게이트<br/>리뷰 및 승인}
+        PR -- "5. Merge" --> UpDevelop2
+        
+        %% 브랜치 보호 규칙 표현
+        UpDevelop2 -.-> Rule[" 보호 규칙: Direct Push 불가"]
+    end
+
+    %% 스타일 설정
+    style Bad_Flow fill:#fff5f5,stroke:#ff8a8a
+    style Good_Flow fill:#f0f9ff,stroke:#0ea5e9
+    style PR fill:#fff9c4,stroke:#fbc02d
+    style Risk color:#ff0000, font-weight:bold
+```
+프로젝트 마감이 임박한 시점까지 Git workflow와 핵심 명령어(fetch, merge, PR)의 역할을 충분히 이해·체화하지 못한 상태에서, 개인 작업 브랜치가 아닌 오가니제이션 원본 레포지토리의 develop 브랜치에 직접 push하는 사례가 발생하였다.
+
+해당 행위는 팀 단위 통합 브랜치의 안정성을 훼손할 수 있는 고위험 작업으로 판단되었으며, 이후 모든 개발 작업은 개인 fork → feature 브랜치 → PR → 리뷰 → merge 절차로만 수행하도록 규칙을 재정립하였다.
+
+> 로컬 브랜치 기준 개념 부족으로 인한 merge/pull/push 혼선
+```mermaid
+graph LR
+    subgraph Problem ["문제 상황: HEAD 인지 부족"]
+        direction LR
+        P1["명령어 실행: merge/pull/push"] --> P2{"현재 HEAD가<br/>의도와 맞는가?"}
+        P2 -- "확인 생략" --> P3["엉뚱한 브랜치에 반영"]
+        P3 --> P4["작업 누락 또는 원격 히스토리 꼬임"]
+    end
+
+    subgraph Solution ["개선: HEAD 선행 확인 절차"]
+        direction LR
+        S1["Git 작업 시작"] --> S2["현재 브랜치 확인<br/>(git status / branch)"]
+        S2 --> S3{"의도한 브랜치<br/>(HEAD)인가?"}
+        S3 -- "No" --> S4["브랜치 이동<br/>(git switch / checkout)"]
+        S4 --> S2
+        S3 -- "Yes" --> S5["명령어 실행: merge/pull/push"]
+        S5 --> S6["의도한 위치에 정확히 반영"]
+    end
+
+    %% 스타일 설정
+    style Problem fill:#fff5f5,stroke:#ff8a8a
+    style Solution fill:#f0f9ff,stroke:#0ea5e9
+    style S2 font-weight:bold,stroke-width:2px
+```
+로컬 워크스테이션에서 merge, pull, push 명령이 “어떤 로컬 브랜치를 기준으로 실행되는지”에 대한 이해가 부족하여, 의도한 변경 사항이 fork 레포지토리에 반영되지 않거나 예상과 다른 브랜치에 반영되는 문제가 발생하였다.
+
+이를 계기로 모든 Git 작업 전 현재 체크아웃된 로컬 브랜치를 명시적으로 확인하는 절차를 팀 공통 습관으로 정착시켰다.
+
+---
+
+> Pull Request 대상 브랜치 설정 오류
+```mermaid
+graph LR
+    subgraph Problem [잘못된 흐름: Default Branch 설정 오류]
+        direction LR
+        F1[origin / feature/*] -- "PR 생성" --> PR1{base: upstream/main}
+        PR1 -- "병합 시도" --> M1[upstream / main]
+        M1 -.-> Error[" 배포 브랜치에 미검증 코드 유입"]
+    end
+
+    subgraph Solution [정상 흐름: GitFlow 준수]
+        direction LR
+        F2[origin / feature/*] -- "PR 생성" --> PR2{base: upstream/develop}
+        PR2 -- "검수 후 병합" --> D2[upstream / develop]
+        D2 -- "릴리즈 준비 완료 시" --> M2[upstream / main]
+    end
+
+    %% 스타일 설정
+    style Problem fill:#fff5f5,stroke:#ff8a8a
+    style Solution fill:#f0f9ff,stroke:#0ea5e9
+    style PR1 fill:#ffffff,stroke:#ff0000
+    style PR2 fill:#ffffff,stroke:#007bff
+```
+Pull Request 생성 시, 목적지(base)를 오가니제이션 레포지토리의 develop 브랜치가 아닌 main 브랜치로 설정하는 실수가 반복적으로 발생하였다.
+
+이 문제를 통해 GitHub의 default branch 개념과 PR 생성 시 base/compare의 의미를 재정비하였으며, default branch 변경 방법과 PR 생성 전 대상 브랜치 검증 절차를 문서화하였다.
+
+---
+
+> 작업 전 upstream 동기화 누락으로 인한 Git Flow 붕괴
+```mermaid
+graph LR
+    subgraph Bad_Flow [잘못된 흐름: 기준선 붕괴]
+        direction LR
+        U1[Upstream / develop <br/>신규 커밋 존재] -- "동기화 누락" -.- L1[Local / develop <br/>과거 상태 유지]
+        L1 --> F1[Local / feature/* <br/>오래된 코드 기준 생성]
+        F1 -- "작업 후 Push" --> P1{PR 생성}
+        P1 -- "Base와 대조" --> ERR[" 대규모 충돌 및 로직 불일치"]
+    end
+
+    subgraph Good_Flow [정상 흐름: 기준선 동기화]
+        direction LR
+        U2[Upstream / develop <br/>최신 상태] -- "1. fetch / merge" --> L2[Local / develop <br/>최신화 완료]
+        L2 -- "2. 브랜치 생성" --> F2[Local / feature/* <br/>최신 코드 기준 출발]
+        F2 -- "3. 작업 완료" --> P2{4. PR 생성}
+        P2 -- "검토 후" --> OK[" 깔끔한 병합"]
+    end
+
+    %% 스타일 설정
+    style Bad_Flow fill:#fff5f5,stroke:#ff8a8a
+    style Good_Flow fill:#f0f9ff,stroke:#0ea5e9
+    style ERR color:#ff0000, font-weight:bold
+    style L2 font-weight:bold, stroke-width:2px
+```
+개발 작업 시작 전 오가니제이션 레포지토리의 최신 상태를 로컬 워크스테이션으로 fetch 및 merge upstream/develop 하지 않은 상태에서 작업을 진행하여, 팀 기준 코드와 개인 작업 코드 간의 흐름이 어긋나는 문제가 발생하였다.
+
+이후 모든 작업은 “작업 시작 전 upstream 동기화”를 필수 체크리스트로 포함하도록 프로세스를 수정하였다.
+
+해당 문제는 push 이전 단계에서 발견되어 커밋을 되돌리는 방식으로 조치하였으며, 이후 로컬 작업 기준 브랜치를 명확히 develop으로 고정하는 규칙을 확립하였다.
+
+---
+
+> 잘못된 기준 브랜치(main) 기반 작업 사례
+```mermaid
+graph LR
+    subgraph Problem [잘못된 흐름: main 기준 분기]
+        direction LR
+        M1[Upstream / main <br/>배포 안정 상태] -- "잘못된 출발점" --> F1[Local / feature/* <br/>개발 코드 누락]
+        F1 -- "오류 감지" --> RB[Rollback: reset / revert]
+        RB -- "브랜치 폐기" --> End1((종료))
+    end
+
+    subgraph Solution [정상 흐름: develop 기준 분기]
+        direction LR
+        D1[Upstream / develop <br/>개발 기준선] -- "동기화" --> LD[Local / develop]
+        LD -- "정상 분기" --> F2[Local / feature/* <br/>모든 개발 코드 포함]
+        F2 -- "작업 완료" --> PR[PR: feature → develop]
+        PR -- "병합" --> D1
+    end
+
+    %% 스타일 설정
+    style Problem fill:#fff5f5,stroke:#ff8a8a
+    style Solution fill:#f0f9ff,stroke:#0ea5e9
+    style RB fill:#ffebee,stroke:#b71c1c,color:#b71c1c
+    style LD font-weight:bold,stroke-width:2px
+```
+오가니제이션 레포지토리의 main 브랜치를 로컬에 병합한 뒤 개발 작업을 진행하여, 실제 개발 기준 브랜치인 upstream/develop과 코드 구조가 상이한 상태로 작업이 이루어졌다.
+
+해당 문제는 push 이전 단계에서 발견되어 커밋을 되돌리는 방식으로 조치하였으며, 이후 로컬 작업 기준 브랜치를 명확히 develop으로 고정하는 규칙을 확립하였다.
+
+---
+
+> 원격 레포지토리(origin) 명명 오류로 인한 Git Flow 불가
+```mermaid
+graph LR
+    subgraph Bad_Flow [잘못된 흐름: 비표준/오타 Remote]
+        direction LR
+        L1[Local Repository] -- "git remote add orgin" --> R1[Remote: orgin]
+        R1 -- "명령 실행: git push origin" --> ERR{에러 발생}
+        ERR -- "결과" --> P1[" 'origin' remote를 찾을 수 없음 <br/>(Workflow 중단)"]
+    end
+
+    subgraph Good_Flow [정상 흐름: 표준 Remote 구조]
+        direction LR
+        L2[Local Repository] -- "1. Push/PR" --> OR[origin: 개인 Fork]
+        L2 -- "2. Sync/Fetch" --> UP[upstream: 팀 원본]
+        OR -- "3. PR 생성" --> UP
+        UP -- "4. 최신화" --> L2
+        
+        style OR fill:#f0f9ff,stroke:#0ea5e9
+        style UP fill:#f0f9ff,stroke:#0ea5e9
+    end
+
+    %% 스타일 설정
+    style Bad_Flow fill:#fff5f5,stroke:#ff8a8a
+    style Good_Flow fill:#f0f9ff,stroke:#0ea5e9
+    style ERR fill:#ffebee,stroke:#b71c1c,color:#b71c1c
+```
+로컬 워크스테이션에 fork 레포지토리를 등록하는 과정에서, 표준 명칭인 origin이 아닌 오타(orgin)로 원격 저장소를 등록하여 Git Flow 기반 명령어 실행이 정상적으로 동작하지 않는 문제가 발생하였다.
+이를 통해 원격 저장소 명명 규칙의 중요성을 인지하였고, origin(개인 fork) / upstream(오가니제이션 레포) 구조를 모든 팀원이 동일하게 유지하도록 가이드라인을 통일하였다.
 
 ---
 
 ## 7. 협업 회고
 
-* Git Flow 기반 협업의 장단점
-* 코드 리뷰 문화 정착 과정
-* 문서화와 규칙의 중요성
-* 향후 개선 방향
+> Git 컨벤션 못지않은 코딩 컨벤션의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/59a649d1-2e71-42ba-8926-a5289d657225" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        뒤늦게 정립된 코딩 컨벤션을 따라 정리된 CSS 변수.
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+프로젝트 착수 단계에서 Git Flow와 Git 컨벤션을 사전에 정립하고 진행한 덕분에, 브랜치 운영·커밋 관리·PR 협업 전반은 매우 안정적이고 만족스럽게 이루어졌다.
+
+다만, 각자 분업한 작업물을 통합하는 과정에서 변수명, 클래스 선택자, 네이밍 방식 등 세부 구현 규칙이 개인별로 상이하여 이를 조정·통일하는 데 과도한 시간과 리소스가 소모되었다.
+
+이 경험을 통해, Git 컨벤션 못지않게 코딩 컨벤션 역시 프로젝트 초기 단계에서 명확히 정의·합의되어야 한다는 점의 중요성을 인식하게 되었다.
+
+---
+
+> 코드 리뷰의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/b507c12a-3d6e-4f54-80cd-a7b7689382a4" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        작업 중 코드 리뷰 모습
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
+개발 과정에서 피로 누적이나 일정 압박으로 인해 사소한 실수, 혹은 중대한 잠재 위험 요소를 인지하지 못한 채 PR을 생성하는 사례가 발생하였다. 이러한 문제는 개인 작업 단계에서는 드러나지 않지만, 통합 이후 시스템 안정성에 직접적인 영향을 줄 수 있는 리스크로 작용한다.
+
+코드 리뷰를 통해 로직 오류, 네이밍 불일치, 사이드 이펙트 가능성 등을 사전에 발견하고 수정함으로써, 장애 발생 가능성과 재작업 비용을 유의미하게 감소시킬 수 있었다.
+
+또한 코드 리뷰는 단순한 검증 수단을 넘어, 팀원 각자의 작업 진행 상황과 구현 방향을 공유하는 창구로 기능하였다.
+
+---
+
+> 문서화와 규칙의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f0ee9104-b329-47c4-9f6a-432102203198" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        실제 중요한 이정표가 된 프로젝트 위키
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+커밋 컨벤션, 메시지 양식, 이슈 템플릿, 브랜치 작성 전략과 같은 협업 규칙을 사전에 정립했음에도 불구하고, 실제 작업 과정에서는 기본적인 Git 명령어조차 반복적으로 망각하는 상황이 발생하였다. 이로 인해 불필요한 사고가 발생하고, 재학습에 시간이 소요되면서 가용 작업 시간이 감소하는 문제가 나타났다.
+
+그럼에도 불구하고, 프로젝트 범위가 일부 조정된 이후에도 최종 목표를 성공적으로 달성할 수 있었던 핵심 요인은 명문화된 컨벤션 문서와 지속적으로 갱신된 Wiki의 존재였다.
+
+문서화는 단순한 기록이 아니라, 지식 손실을 방지하는 안전망이며 팀 생산성을 유지하는 운영 인프라이자 프로젝트 리스크를 흡수하는 핵심 자산임을 분명히 인식하게 되었다.
