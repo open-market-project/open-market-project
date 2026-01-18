@@ -806,6 +806,20 @@ graph LR
 
 * **로그인 페이지**
 
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/b3c55120-ab2c-4427-8ddb-8982998a4acb" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        로그인 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
 > “본 모듈(auth.js)은 구매자·판매자 회원가입 및 관련 유효성 검증을 위한 API 통신 레이어를 제공한다. 실제 회원가입 UI 및 입력 제어는 별도 페이지 스크립트에서 수행된다.”
 
 ```mermaid
@@ -826,14 +840,26 @@ graph LR
     Res -- 성공 --> Go[Redirect] --> End
     Res -- 실패 --> E2[실패 메시지] --> End
 ```
-<!--figcaption -->
 * 아이디/비밀번호 미입력 및 불일치 시 실시간 **경고 문구(Validation)** 노출.
 * 로그인 실패 시 해당 입력창 자동 **Focus 이벤트** 및 입력값 초기화 처리.
 * 로그인 성공 시 이전 페이지(Redirect)로 자동 이동.
 * 구매자/판매자 탭 분리를 통한 맞춤형 로그인 인터페이스 제공.
 
-<!--figcaption -->
 **회원가입 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/ba7e53b0-2e83-4bc4-9b84-bb7bd007763a" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        회원가입 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “회원가입 UI 로직은 signup.js에서 입력·검증·상태 관리를 담당하고, 실제 회원가입 및 유효성 검증 요청은 auth.js의 공통 API 레이어를 통해 서버와 통신한다. 전체 흐름은 입력 → 검증 → API 호출 → 결과 분기 구조로 구성된다.”
 ```mermaid
 graph LR
@@ -867,6 +893,21 @@ graph LR
 > 상품 정보를 탐색하고 상세 내용을 확인하는 영역입니다.
 
 **상품 목록 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/2a52801b-54c4-4be9-8ef7-61a5382f8307" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        상품목록 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
 > “상품 목록 페이지는 main.js에서 목록 렌더링과 UI 이벤트를 담당하고, 상품 데이터 조회는 productAPI를 통해 서버와 통신한다. 데이터 조회 → 카드 생성 → 사용자 클릭 → 상세 페이지 이동으로 이어지는 좌→우 가로 흐름 구조를 가진다.”
 
 ```mermaid
@@ -893,6 +934,20 @@ graph LR
 
 
 **상품 상세 페이지**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/16db792e-20eb-45ef-8905-d9f5d4752b9d" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        상품상세 화면
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “상품 상세 페이지는 detail.js에서 화면 상태·이벤트를 제어하고, 상품 조회·장바구니·주문 생성 요청은 productAPI를 통해 서버와 통신한다. 사용자 입력 → 상태 변경 → API 호출 → 결과 분기 구조로 구성된 가로 흐름이다.”
 
 ```mermaid
@@ -933,6 +988,20 @@ graph LR
 > 전체 페이지에서 일관된 UX를 제공하기 위한 공통 요소입니다.
 
 **GNB (Global Navigation Bar)**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/ffc05245-e61a-4b2b-82d2-c0c3c9716d64" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        헤더
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > “GNB는 gnb.js에서 로그인 상태와 사용자 유형을 기준으로 UI를 분기 렌더링하며, 모든 사용자 액션은 로컬 인증 상태(storage)를 기준으로 페이지 이동 또는 모달 노출로 처리된다. 서버 통신 없이 상태 기반으로 동작하는 좌→우 흐름 구조다.”
 
 ```mermaid
@@ -969,6 +1038,20 @@ graph LR
 
 
 **권한 제어 모달 (Modal)**
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f03500d8-1be2-4400-8ae6-8af2e9f47f9e" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 푸터
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > 로그인 유도 모달은 외부 트리거에 의해 표시되며, 사용자 선택에 따라 단순 종료 또는 로그인 페이지로 이동하는 좌→우 단일 책임 흐름 구조를 가진다.
 ```mermaid
 graph LR
@@ -999,7 +1082,22 @@ graph LR
 
 
 **마이페이지 드롭다운**
+
+
 > 전역 모달은 외부 트리거에 의해 메시지와 콜백을 주입받아 표시되며, 사용자 선택에 따라 단순 종료 또는 지정된 후속 동작을 실행하는 좌→우 범용 확인 흐름 구조를 가진다.
+
+  <div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/c4692395-fade-4682-b72a-dfde998718bc" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 드롭다운
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
 
 ```mermaid
 graph LR
@@ -1033,6 +1131,20 @@ graph LR
 
 
 * **푸터 (Footer)**
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f03500d8-1be2-4400-8ae6-8af2e9f47f9e" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        모달 / 푸터
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 > 푸터는 모든 링크와 버튼 클릭을 미구현 기능으로 처리하며, 전역 확인 모달을 통해 사용자 선택에 따라 현재 페이지 유지 또는 메인 페이지 이동으로 분기되는 흐름 구조를 가진다.
 
 ```mermaid
