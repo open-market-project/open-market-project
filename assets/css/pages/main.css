@@ -1,22 +1,21 @@
 .product-section {
-    --main-grid-gap-x: 7.0rem;       
-    --main-grid-gap-y: 7.8rem;       
-    --main-section-top-space: 8.0rem; 
-    --main-card-max-width: 38.0rem; 
-    max-width: var(--container-width); 
+    max-width: none; 
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box; 
-    padding: 0 var(--container-padding);
+    padding: 0;
 }
 
 .product-section .product-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3열 구조 */
-    column-gap: var(--main-grid-gap-x) !important;
-    row-gap: var(--main-grid-gap-y) !important;
-    padding-top: var(--main-section-top-space) !important;
+    grid-template-columns: repeat(3, 38rem); 
+    justify-content: center;  
+    column-gap: 7.0rem; 
+    row-gap: 7.8rem;  
+    padding-top: 8.0rem;
     padding-bottom: 8.0rem;
+    max-width: 128rem; 
+    margin: 0 auto;  
 }
 
 .product-card {
