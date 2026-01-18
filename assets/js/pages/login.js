@@ -63,9 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // [스마트 리다이렉션] 이전 페이지 또는 메인으로 이동
             const prevPage = document.referrer;
-            if (prevPage && !prevPage.includes("login")) {
+            // 직전 페이지가 로그인(login) 또는 회원가입(signup) 페이지가 아닐 때만 이전으로 이동
+            if (prevPage && !prevPage.includes("login") && !prevPage.includes("signup")) {
                 location.href = prevPage;
             } else {
+                // 그 외의 경우는 무조건 메인 페이지로 이동
                 location.href = "../../index.html";
             }
             
