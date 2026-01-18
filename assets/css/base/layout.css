@@ -140,8 +140,7 @@ header .container {
 }
 
 .main-visual img {
-    width: 100vw;
-    /* margin-left: calc(50% - 50vw); */
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
