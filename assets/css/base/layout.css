@@ -1,6 +1,5 @@
 /*공통 레이아웃 구조*/
 
-/* 1 . base */
 html {
     font-size: 62.5%; /* 1rem = 10px로 계산하기 편하게 설정 */
 }
@@ -17,7 +16,6 @@ body{
     font-family: var(--font-base);
 }
 
-/* 2 . 중앙 정렬*/
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -26,7 +24,6 @@ body{
     box-sizing: border-box;
 }
 
-/* 3 . header */
 header {
     background-color: var(--color-bg-primary);
     border-bottom: 1px solid var(--color-bg-secondary);
@@ -105,16 +102,15 @@ header .container {
     height: var(--icon-lg);
 }
 
-/* 4 . main content */
 .main-content {
-    flex: 1; /*본문이 화면 공간 차지, 푸터 위치 잡기*/
+    flex: 1; 
     padding-top: 0;
     padding-bottom: 0;
 }
 
-/* 5 . promotion */
 .promotion {
     width: 100%;
+    max-width: 100%;
     position: relative; 
     overflow: hidden;
 }
@@ -123,6 +119,7 @@ header .container {
     display: flex; /* 내부 요소(article)들을 가로로 배치 */
     transition: transform 0.5s ease-in-out; /* 이동할 때 부드럽게 애니메이션 효과 */
     width: 100%;
+    max-width: 100%;
 }
 
 /*배너*/
@@ -130,15 +127,22 @@ header .container {
     flex: 0 0 100%;
     position: relative;
     width: 100%;
-    height: 26vw;
+    max-width: 100%;
+    height:auto;
     background-color: var(--color-bg-secondary);
     overflow: hidden;
 }
 
+.main-visual a {
+    display: block;
+    width: 100%;
+}
+
 .main-visual img {
     width: 100%;
-    height: 100%; /* 부모인 .main-visual의 고정 높이 50.0rem을 그대로 따름 */
-    object-fit: cover; 
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .btn-prev, .btn-next {
@@ -195,7 +199,6 @@ header .container {
     height: 0.6rem;
 }
 
-/* 6 . product section */
 .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*3 열 구조*/
@@ -221,14 +224,12 @@ header .container {
     object-fit: cover;
 }
 
-/* 7 . footer*/
 .footer {
     width: 100%;
     background-color: var(--color-bg-secondary);
     padding: 3.0rem 0;
 }
 
-/* 8 . accessibility */
 .ir {
     position: absolute;
     width: 1px;
