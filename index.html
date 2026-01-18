@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main-pages</title>
-    <link rel="stylesheet" href="./assets/css/base/variables.css">
     <link rel="stylesheet" href="./assets/css/base/reset.css">
+    <link rel="stylesheet" href="./assets/css/base/variables.css">
     <link rel="stylesheet" href="./assets/css/base/components.css">
     <link rel="stylesheet" href="./assets/css/base/layout.css">
     <link rel="stylesheet" href="./assets/css/pages/main.css">
@@ -18,24 +18,58 @@
     <header></header>
 
     <main class="main-content">
-        <section class="promotion">
+        <section class="promotion" aria-label="프로모션 배너">
             <h2 class="ir">메인 프로모션 배너</h2>
 
-            <section class="slider-list"></section>
+            <ul class="slider-list">
+                <li class="main-visual">
+                    <a href="#">
+                        <img src="./assets/images/banner01.png" alt="봄 신상품 전 품목 30% 할인 및 무료 배송 이벤트">
+                    </a>
+                </li>
+                <li class="main-visual">
+                    <a href="#">
+                        <img src="./assets/images/banner02.png" alt="여름 신상품 전 품목 30% 할인 및 무료 배송 이벤트">
+                    </a>
+                </li>
+                <li class="main-visual">
+                    <a href="#">
+                        <img src="./assets/images/banner03.png" alt="가을 신상품 전 품목 30% 할인 및 무료 배송 이벤트">
+                    </a>
+                </li>
+                <li class="main-visual">
+                    <a href="#">
+                        <img src="./assets/images/banner04.png" alt="겨울 신상품 전 품목 30% 할인 및 무료 배송 이벤트">
+                    </a>
+                </li>
+                <li class="main-visual">
+                    <a href="#">
+                        <img src="./assets/images/banner05.png" alt="새해맞이 신상품 전 품목 30% 할인 및 무료 배송 이벤트">
+                    </a>
+                </li>
+            </ul>
 
-            <section class="slider-controls">
-                <button type="button" class="btn-prev"><span class="ir">이전 배너</span></button>
-                <button type="button" class="btn-next"><span class="ir">다음 배너</span></button>
-            </section>
+            <nav class = "slider-controls" aria-label="배너 이동">
+                <button type="button" class="btn-prev">
+                    <span class="ir">이전 배너 보기</span>
+                </button>
+                <button type="button" class="btn-next">
+                    <span class="ir">다음 배너 보기</span>
+                </button>
+            </nav>
 
-            <ul class="pagination"></ul>
+            <ol class="pagination" aria-label="배너 페이지">
+                <li class="on"><span class="ir">1번 배너</span></li>
+                <li><span class="ir">2번 배너</span></li>
+                <li><span class="ir">3번 배너</span></li>
+                <li><span class="ir">4번 배너</span></li>
+                <li><span class="ir">5번 배너</span></li>
+            </ol>
         </section>
 
-        <section class="product-item">
-            <div class="container">
-                <h2 class="ir">전체 판매 상품 목록</h2>
-                <ul class="product-list"></ul> 
-            </div>
+        <section class="product-section" aria-labelledby="product-title">
+            <h2 id="product-title" class="ir">전체 판매 상품 목록</h2>
+            <ul class="product-list"></ul>
         </section>
     </main>
     
