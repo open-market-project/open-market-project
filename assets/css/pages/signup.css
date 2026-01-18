@@ -1,13 +1,13 @@
 .header-signup {
     padding: var(--form-logo-padding-v) 0; 
     text-align: center;
-    background-color: var(--color-bg-base);
+    background-color: var(--color-bg-primary);
     border-bottom: none;
     box-shadow: none;
 }
 
 .logo-home img {
-    width: var(--logo-size-signup);
+    width: var(--form-logo-width);
     height: auto;
 }
 
@@ -16,7 +16,7 @@
     display: flex;
     /*가입 상자*/
     justify-content: center;
-    background-color: var(--color-bg-base);
+    background-color: var(--color-bg-primary);
 }
 
 .signup-inner {
@@ -36,27 +36,27 @@
     flex: 1;
     padding: var(--btn-padding-tab-t) 0 var(--btn-padding-tab-b);
     background-color: var(--color-bg-secondary);
-    border: 1px solid var(--color-bg-border);
-    border-radius: var(--radius-form) var(--radius-form) 0 0; 
-    font-size: var(--fs-fixed-lg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    font-size: var(--fs-lg);
     font-weight: var(--fw-medium);
-    color: var(--color-text-base);
+    color: var(--color-text-primary);
     position: relative;
     z-index: 1; 
 }
 
 .signup-tabs button.on {
-    background-color: var(--color-bg-base);
-    border-bottom: 1px solid var(--color-bg-base); 
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-bg-primary); 
     margin-bottom: -1px; 
     z-index: 15; 
 }
 
 .common-info, .seller-info-area {
-    background-color: var(--color-bg-base);
-    border: 1px solid var(--color-bg-border);
-    border-radius: 0 0 var(--radius-form) var(--radius-form); 
-    padding: 1.8rem var(--space-md);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: var(--form-box-padding);
     position: relative;
     z-index: 10; 
     margin-top: -1px; 
@@ -78,7 +78,7 @@
 
 /* 판매자 탭 활성화 시 판매자 영역 하단 border-radius 추가 */
 .signup-form.seller-mode .seller-info-area {
-    border-radius: 0 0 var(--radius-form) var(--radius-form);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
     display: block;
 }
 
@@ -137,9 +137,10 @@ label[for="phone-prefix"] {
 
 .btn-submit-join {
     width: 100%;
-    padding: var(--btn-padding-v) 0;
-    margin-top: var(--space-form);
-    font-size: var(--fs-fixed-lg);
+    height: var(--btn-height-md);;
+    padding: 0;
+    margin-top: var(--form-gap);
+    font-size: var(--fs-lg);
     font-weight: var(--fw-bold);
     border-radius: var(--radius-sm);
     background-color: var(--color-primary);
@@ -156,10 +157,10 @@ label[for="phone-prefix"] {
 .signup-form input:not([type="checkbox"]), 
 .signup-form select {
     width: 100%;
-    height: 5.4rem;
-    padding: 0 var(--form-input-padding-h);
+    height: var(--form-input-height);
+    padding: 0 var(--form-input-padding-x);
     line-height: normal; 
-    border: 1px solid var(--color-bg-border);
+    border: 1px solid var(--color-border-primary);
     border-radius: var(--radius-sm);
     font-size: var(--fs-md);
     /*box 크기 고정*/
@@ -197,7 +198,7 @@ input[type="password"] {
 
 .btn-check, .btn-verify {
     width: 13.5rem;
-    height: 5.4rem;
+    height: var(--form-input-height);
     background-color: var(--color-primary);
     color: var(--color-text-inverse);
     border-radius: var(--radius-sm);
@@ -223,11 +224,11 @@ input[type="password"] {
 }
 
 .msg-error, .error-message {
-    color: var(--form-color-error); 
+    color: var(--color-error); 
 }
 
 .msg-success {
-    color: var(--form-color-success); 
+    color: var(--color-success);
 }
 
 /* 메시지 박스 표시 상태 */
@@ -242,7 +243,7 @@ input[type="password"] {
 }
 
 .msg-box.show.error {
-    color: var(--form-color-error);
+    color: var(--color-error);
 }
 
 .msg-box.show.success {
@@ -261,6 +262,15 @@ input[type="password"] {
     opacity: 1;
     transition: opacity 0.2s ease;
     object-fit: contain;
+    filter: var(--form-filter-disabled);
+}
+
+.icon-valid-check.valid {
+    filter: none; /* <수정: 유효성 통과 시 필터 해제 */
+}
+
+.input-error {
+    border-color: var(--color-error) !important; /* <수정 */
 }
 
 /* 3. 유효성 검사 통과 시 */
@@ -271,10 +281,10 @@ input[type="password"] {
 
 /* 입력창 에러 시 테두리 강조 */
 .input-error {
-    border-color: var(--form-color-error);
+    border-color: var(--color-error) !important;
 }
 
 /* 성공시 */
 .input-success {
-    border-color: var(--form-color-success) !important;
+    border-color: var(--color-success) !important;
 }
