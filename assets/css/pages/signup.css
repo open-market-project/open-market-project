@@ -1,12 +1,15 @@
 .header-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: var(--form-logo-padding-v) 0; 
-    text-align: center;
     background-color: var(--color-bg-primary);
     border-bottom: none;
     box-shadow: none;
 }
 
 .logo-home img {
+    display: block;
     width: var(--form-logo-width);
     height: auto;
 }
@@ -137,19 +140,20 @@ label[for="phone-prefix"] {
 
 .btn-submit-join {
     width: 100%;
-    height: var(--btn-height-md);;
-    padding: 0;
+    height: var(--btn-height-md);
     margin-top: var(--form-gap);
     font-size: var(--fs-lg);
     font-weight: var(--fw-bold);
     border-radius: var(--radius-sm);
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); 
     color: var(--color-text-inverse);
+    transition: background-color 0.3s ease;
 }
 
 /*비활성화 상태*/
 .btn-submit-join:disabled {
-    background-color: var(--color-bg-border);
+    background-color: var(--color-border-primary) !important;
+    color: var(--color-text-inverse);
     cursor: not-allowed;
 }
 
@@ -171,15 +175,15 @@ label[for="phone-prefix"] {
     display: block;
     font-size: var(--fs-md);
     color: var(--color-text-muted);
-    margin-bottom: var(--space-xs);
-    /* margin-top: 2.0rem; */
+    margin-bottom: var(--space-2xs);
+    margin-top: 1.2rem;
 }
 
 .input-row {
     position: relative;
     display: flex;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-form);
+    gap: var(--space-xs);
+    margin-bottom: var(--form-gap);
 }
 
 .input-container {
@@ -259,14 +263,14 @@ input[type="password"] {
     height: 2.2rem;
     pointer-events: none;
     z-index: 10;
-    opacity: 1;
-    transition: opacity 0.2s ease;
+    opacity: 1; 
+    transition: filter 0.2s ease;
     object-fit: contain;
     filter: var(--form-filter-disabled);
 }
 
 .icon-valid-check.valid {
-    filter: none; /* <수정: 유효성 통과 시 필터 해제 */
+    filter: none;
 }
 
 .input-error {
