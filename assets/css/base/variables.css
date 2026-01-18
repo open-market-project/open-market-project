@@ -42,6 +42,7 @@
   /* background colors */
     --color-bg-primary: #FFFFFF; 
     --color-bg-secondary: #F2F2F2; /*푸터 및 구분 섹션 배경*/
+    --color-bg-disabled: #E0E0E0; /*비활성화 배경*/
     --color-bg-overlay:rgba(0, 0, 0, 0.6); /*뒷배경*/
 
     /*border colors*/
@@ -61,14 +62,16 @@
   /* Container */
     --container-width: 1280px;
     --container-padding: var(--space-container);
+    --banner-max-width: clamp(1280px, 100vw, 1680px);
 
     --space-section: clamp(4.0rem, 5vw, 8.0rem);
     --space-container: clamp(2.0rem, 5vw, 2.2rem);
 
   /* Spacing System */
-    --space-2xs: 0.4rem;
-    --space-xs: 0.8rem;
-    --space-sm: 1.2rem; 
+    --space-3xs: 0.4rem;
+    --space-2xs: 0.8rem;
+    --space-xs: 1.2rem; 
+    --space-sm: 1.7rem;
     --space-md: clamp(2.0rem, 2.5vw, 3.2rem); /*섹션 내 요소*/
     --space-lg: clamp(4.0rem, 5vw, 8.0rem); /*섹션 사이 간격*/
     --space-xl: clamp(8.0rem, 8vw, 12.0rem);
@@ -154,6 +157,8 @@
     --btn-height-lg: 6.0rem;
 
   /* button size */
+    --btn-height-sm: 5.4rem;
+    --btn-height-md: 6.0rem;
     --btn-min-width: clamp(8.0rem, 15vw, 12.0rem);
     --btn-height-main : clamp(6.0rem, 8vw, 8.0rem); /*강조되는 메인 버튼 사용*/
     --btn-height: clamp(4.0rem, 6vw, 6.0rem); /*호두 기준*/
@@ -174,7 +179,10 @@
     --form-gap: 1.5rem;
     --form-logo-padding-v: 4.0rem;
     --form-input-height: 5.4rem;
-    --form-input-padding-h: 1.5rem;
+    --form-input-padding-x: 1.5rem;
+    --form-box-padding: 3.5rem;  
+    --form-input-gap: 3.6rem;    
+    --form-title-margin: 7.0rem;  
     
   /* Form Icons Filter */
     --form-filter-success: invert(48%) sepia(87%) saturate(418%) hue-rotate(84deg) brightness(95%) contrast(88%);
@@ -199,4 +207,35 @@
   /* 11. Legacy (하위 호환성 유지) */
     --space-form: var(--form-gap);
     --form-space-msg: var(--form-msg-gap);
+
+  /* 12 . Detail Page Specific */
+    --detail-page-top: 8.0rem;
+    --detail-section-gap: 14.0rem;
+    --detail-image-gap: 5.0rem;
+    --detail-order-top: 13.8rem;
+    --detail-amount-height: 11.0rem;
+    --detail-btn-gap: 1.4rem;
+
+  /* 13 . footer specific */
+    --footer-top-margin: 2.1rem;
+    --footer-link-gap: 1.4rem;
+    --footer-divider-margin: 3.0rem;
+    --footer-info-gap: 1.0rem;
+
+  /* 14 . Modal Specific */
+    --modal-width: 36.0rem;
+    --modal-max-height: 20.0rem;
+    --modal-padding: 5.0rem 4.0rem 7.5rem;
+    --modal-btn-width: 10.0rem;
+
+ /* 15 . GNB Specific */
+    --gnb-seller-btn-padding: 1.1rem 2.0rem;
+    --gnb-dropdown-width: 13.0rem;
+    --gnb-dropdown-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    --gnb-menu-item-padding: 1.0rem;
+
+/* 16 . main specific */
+    --main-grid-gap-y: 7.8rem; 
+    --main-card-max-width: 38.0rem; 
+    --main-section-padding: 8.0rem;
 }

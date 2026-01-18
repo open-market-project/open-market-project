@@ -6,11 +6,11 @@
     width: 100%;
     height: 100%;
 
-    background-color: var(--color-bg-dim);
+    background-color: var(--color-bg-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100; /* GNB보다 위에 오도록 설정 */
+    z-index: var(--z-modal); /* GNB보다 위에 오도록 설정 */
 }
 
 /* 모달 흰색 박스 */
@@ -19,12 +19,13 @@
     text-align: center;
     box-sizing: border-box;
 
-    width: 36.0rem;
-    max-height: 20.0rem;
-    padding: 5.0rem 4.0rem 7.5rem;
+    width: var(--modal-width);
+    max-height: var(--modal-max-height);
+    padding: var(--modal-padding);
 
-    background-color: var(--color-bg-base);
-    border: 1px solid var(--color-bg-secondary);
+    background-color: var(--color-bg-primary); 
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
 }
 
 .btn-close-x {
@@ -34,16 +35,15 @@
 }
 
 .btn-close-x-icon {
-    width: var(--icon-size-md);
-    height: var(--icon-size-md);
+    width: var(--icon-md);
+    height: var(--icon-md);
 }
 
 .modal-text {
-    font-family: var(--font-base);
     font-weight: var(--fw-regular);
     font-size: var(--fs-md);
     line-height: 1.5;
-    color: var(--color-text-base);
+    color: var(--color-text-primary);
     margin-bottom: var(--radius-lg);
 }
 
@@ -55,27 +55,26 @@
 
 /* 버튼 공통 스타일 */
 .modal-btns button {
-    width: 10.0rem;
+    width: var(--modal-btn-width);
     height: 4.0rem;
     border-radius: var(--radius-sm);
 
-    font-family: var(--font-base);
     font-size: var(--fs-sm); 
     font-weight: var(--fw-medium);
     
-    cursor: pointer;
+    transition: all var(--transition-base);
 }
 
 /* 아니오 버튼 */
 .btn-no {
-    background-color: var(--color-bg-base);
-    border: 2px solid var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
+    border: 2px solid var(--color-border-light);
     color: var(--color-text-muted);
 }
 
 .btn-no:hover {
     border: 2px solid var(--color-text-muted);
-    color: var(--color-text-base);
+    color: var(--color-text-primary);
 }
 
 /* 예 버튼 */

@@ -1,7 +1,10 @@
 /* ===== 상품 구매 요약 영역 (Top) ===== */
 .main-content .container {
-    margin-top: 8.0rem;
+    margin-top: var(--detail-page-top);
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--detail-section-gap);
 }
 
 .product-summary {
@@ -12,7 +15,7 @@
     width: var(--product-img-size);
     height: var(--product-img-size);
     object-fit: cover;
-    margin-right: 5.0rem;
+    margin-right: var(--detail-image-gap);
 }
 
 /* 정보 요약 컨테이너 */
@@ -22,44 +25,32 @@
     flex-direction: column;
 }
 
-.main-content .container{
-    display: flex;
-    flex-direction: column;
-    gap: 14rem;
-}
-
 /* 상품 기본 정보 (판매자, 이름, 가격) */
 .product-meta {
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: var(--space-sm);;
 }
 
 .seller {
-    font-family: var(--font-base);
     font-size: var(--fs-md);
-    font-weight: var(--fw-regular);
-    color: var(--color-dark);
+    color: var(--color-text-muted);;
 }
 
 .product-name {
-    font-family: var(--font-base);
-    font-size: var(--fs-xxl);
-    font-weight: var(--fw-regular);
-    color: var(--color-text-base);
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
 }
 
 .L-price {
-    font-family: var(--font-base);
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-2xl);
     font-weight: var(--fw-bold);
-    color: var(--color-text-base);
+    color: var(--color-text-primary);
 }
 
 .L-price::after {
     content: '원';
     font-size: var(--fs-lg);
-    font-weight: var(--fw-regular);
     margin-left: 0.2rem;
 }
 
@@ -69,31 +60,28 @@
 
 /* 주문 관련 정보 (배송, 수량, 버튼) */
 .order-meta {
-    margin-top: 13.8rem;
+    margin-top: var(--detail-order-top);
     display: flex;
     flex-direction: column;
-    gap: 3.0rem;
+    gap: var(--space-md); /*불안*/
 }
 
-#shipping {
+.shipping {
     font-size: var(--fs-md);
-    font-weight: var(--fw-regular);
-    font-family: var(--font-base);
     color: var(--color-text-muted);
 }
 
 .order-meta_amount {
     width: 100%;
-    height: 11rem;
-    border-top: 2px solid var(--color-bg-border);
-    border-bottom: 2px solid var(--color-bg-border);
+    height: var(--detail-amount-height);
+    border-top: 2px solid var(--color-border-primary);;
+    border-bottom: 2px solid var(--color-border-primary);
     display: flex;
     align-items: center;
 }
 
 .order-meta_price-group {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 3.2rem 0 2.2rem;
@@ -106,9 +94,8 @@
 
 .price-info-wrapper{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-xs); 
 }
 
 .quantity{
@@ -124,7 +111,7 @@
 
 .btn-group {
     display: flex;
-    gap: 1.4rem;
+    gap: var(--detail-btn-gap);
 }
 
 /* ===== 상품 상세 정보 탭 영역 (Bottom) ===== */
@@ -136,19 +123,18 @@
 }
 
 .product-info_header button {
-    /* flex: 1; */
     flex-shrink: 0;
     width: 32rem;
     height: var(--btn-height);
     border: none;
-    border-bottom: 6px solid var(--color-tab-border);
+    border-bottom: 6px solid var(--color-border-light);
     font-size: var(--fs-lg);
     cursor: pointer;
     color: var(--color-text-muted);
     box-shadow: none;
 }
 
-.product-info_header .tab-Activ-button {
+.product-info_header .tab-active {
     border-bottom-color: var(--color-primary);
     color: var(--color-primary);
     font-weight: var(--fw-bold);
@@ -157,8 +143,8 @@
 .amount{
     width: 15rem;
     height: 5rem;
-    background-color: var(--color-bg-base);
-    border: solid 1px var(--color-bg-border);
+    background-color: var(--color-bg-primary);
+    border: solid 1px var(--color-border-primary);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: stretch;
@@ -175,8 +161,6 @@
     cursor:pointer;
 }
 
-
-
 .minus::before,
 .plus::before{
     width: 2rem;
@@ -189,7 +173,7 @@
     background-position: center;
     background-size: contain;
     opacity: 1;
-    transition: opacity .2s, filter .2s;
+    transition: opacity var(--transition-base), filter var(--transition-base);
 }
 
 .minus::before{
@@ -218,17 +202,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: solid 1px var(--color-bg-border);
-    border-left: solid 1px var(--color-bg-border);
-
-    font-family: var(--font-base);
+    border-right: solid 1px var(--color-border-primary);
+    border-left: solid 1px var(--color-border-primary);
     font-size: var(--fs-lg);
 }
 
 /* 상태 */
 .minus.is-disabled{
     pointer-events: none;
-    background-color: rgba(224, 224, 224, 1);
+    background-color: var(--color-bg-disabled);
 }
 
 .minus.is-disabled::before{
@@ -237,7 +219,7 @@
 
 .plus.is-disabled{
     pointer-events: none;
-    background-color: rgba(224, 224, 224, 1);
+    background-color: var(--color-bg-disabled);
 }
 
 .plus.is-disabled::before{
@@ -245,46 +227,44 @@
 }
 
 .totalAmount,
-.order-meta_devider{
+.order-meta_divider{
     color: var(--color-text-muted);
     font-size: var(--fs-lg);
 }
 
-.M-button,
-.M-dark-button{
+.btn-main,
+.btn-dark{
     border: none;
-    background-color: transparent;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-sm);
     color: var(--color-text-inverse);
     font-size: var(--fs-lg);
 }
 
-.M-button{
+.btn-main{
     width: 41.6rem;
     height: var(--btn-height);
     background-color: var(--color-primary);
 }
 
-.M-button:hover{
+.btn-main:hover{
     background-color:var(--color-primary-hover);
 }
 
-.M-button:active{
+.btn-main:active{
     background-color: var(--color-primary-active);
 }
 
 
-.M-dark-button{
+.btn-dark{
     width: 20rem;
     height: var(--btn-height);
     background-color: var(--color-dark);
 }
 
-.M-dark-button:hover{
+.btn-dark:hover{
     background-color: var(--color-dark-hover);
 }
 
-.M-dark-button:active{
+.btn-dark:active{
     background-color: var(--color-dark-active);
 }
-

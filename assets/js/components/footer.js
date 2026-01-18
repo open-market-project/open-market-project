@@ -10,15 +10,14 @@ const renderFooter = () => {
             <div class="footer-top">
                 <ul class="footer-links">
                     <li><a href="#">호두샵 소개</a></li>
-                    <span class="divider">|</span>
-                    <li><a href="#">이용약관</a></li>
-                    <span class="divider">|</span>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <span class="divider">|</span>
+                    <li>|</li> <li><a href="#">이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="link-bold">개인정보처리방침</a></li>
+                    <li>|</li>
                     <li><a href="#">전자금융거래약관</a></li>
-                    <span class="divider">|</span>
+                    <li>|</li>
                     <li><a href="#">청소년보호정책</a></li>
-                    <span class="divider">|</span>
+                    <li>|</li>
                     <li><a href="#">제휴문의</a></li>
                 </ul>
                 <ol class="sns-links">
