@@ -232,4 +232,9 @@
     --gnb-dropdown-width: 13.0rem;
     --gnb-dropdown-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
     --gnb-menu-item-padding: 1.0rem;
+
+/* 16 . main specific */
+    --main-grid-gap-y: 7.8rem; 
+    --main-card-max-width: 38.0rem; 
+    --main-section-padding: 8.0rem;
 }
