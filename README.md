@@ -1475,7 +1475,71 @@ graph LR
 
 ## 7. 협업 회고
 
-* Git Flow 기반 협업의 장단점
-* 코드 리뷰 문화 정착 과정
-* 문서화와 규칙의 중요성
-* 향후 개선 방향
+> Git 컨벤션 못지않은 코딩 컨벤션의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/59a649d1-2e71-42ba-8926-a5289d657225" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        뒤늦게 정립된 코딩 컨벤션을 따라 정리된 CSS 변수.
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+프로젝트 착수 단계에서 Git Flow와 Git 컨벤션을 사전에 정립하고 진행한 덕분에, 브랜치 운영·커밋 관리·PR 협업 전반은 매우 안정적이고 만족스럽게 이루어졌다.
+
+다만, 각자 분업한 작업물을 통합하는 과정에서 변수명, 클래스 선택자, 네이밍 방식 등 세부 구현 규칙이 개인별로 상이하여 이를 조정·통일하는 데 과도한 시간과 리소스가 소모되었다.
+
+이 경험을 통해, Git 컨벤션 못지않게 코딩 컨벤션 역시 프로젝트 초기 단계에서 명확히 정의·합의되어야 한다는 점의 중요성을 인식하게 되었다.
+
+---
+
+> 코드 리뷰의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/b507c12a-3d6e-4f54-80cd-a7b7689382a4" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        작업 중 코드 리뷰 모습
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+
+개발 과정에서 피로 누적이나 일정 압박으로 인해 사소한 실수, 혹은 중대한 잠재 위험 요소를 인지하지 못한 채 PR을 생성하는 사례가 발생하였다. 이러한 문제는 개인 작업 단계에서는 드러나지 않지만, 통합 이후 시스템 안정성에 직접적인 영향을 줄 수 있는 리스크로 작용한다.
+
+코드 리뷰를 통해 로직 오류, 네이밍 불일치, 사이드 이펙트 가능성 등을 사전에 발견하고 수정함으로써, 장애 발생 가능성과 재작업 비용을 유의미하게 감소시킬 수 있었다.
+
+또한 코드 리뷰는 단순한 검증 수단을 넘어, 팀원 각자의 작업 진행 상황과 구현 방향을 공유하는 창구로 기능하였다.
+
+---
+
+> 문서화와 규칙의 중요성
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f0ee9104-b329-47c4-9f6a-432102203198" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        실제 중요한 이정표가 된 프로젝트 위키
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
+커밋 컨벤션, 메시지 양식, 이슈 템플릿, 브랜치 작성 전략과 같은 협업 규칙을 사전에 정립했음에도 불구하고, 실제 작업 과정에서는 기본적인 Git 명령어조차 반복적으로 망각하는 상황이 발생하였다. 이로 인해 불필요한 사고가 발생하고, 재학습에 시간이 소요되면서 가용 작업 시간이 감소하는 문제가 나타났다.
+
+그럼에도 불구하고, 프로젝트 범위가 일부 조정된 이후에도 최종 목표를 성공적으로 달성할 수 있었던 핵심 요인은 명문화된 컨벤션 문서와 지속적으로 갱신된 Wiki의 존재였다.
+
+문서화는 단순한 기록이 아니라, 지식 손실을 방지하는 안전망이며 팀 생산성을 유지하는 운영 인프라이자 프로젝트 리스크를 흡수하는 핵심 자산임을 분명히 인식하게 되었다.
+
