@@ -5,7 +5,7 @@
 
 ---
 
-## 0. 팀 구성 및 역할 분담
+# 팀 구성 및 역할 분담
 
 ##  팀원 소개 및 역할
 
@@ -18,7 +18,7 @@
 > **Note:** 기존 팀원 B의 중도 하차로 인해, 해당 담당 역할(Layout 및 메인 화면 등)은 팀원 강수민 님이 전담하여 완수하였습니다.
 
 ---
-## 협업 및 프로젝트 관리 (Collaboration & Process)
+# 프로젝트 관리 (Collaboration & Process)
 
 ```mermaid
 graph TD
@@ -112,7 +112,7 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
   </div>
 </div>
 
-## 1. 협업 프로세스  (Collaboration Process)
+# 협업 프로세스  (Collaboration Process)
 
 > 협업 시스템 설계 배경
 
@@ -124,7 +124,7 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
 
 ## Collaboration Strategy & Philosophy
 
-### 기능 완성을 이전에 '협업 시스템' 구축을 목표로
+### 가치 정립: 기능 완성 이전에 '협업 시스템'을 목표로
 본 프로젝트에서 오픈마켓 구현은 결과물 그 자체가 아닌, **학습과 성장을 위한 매개체**입니다. 팀 전원은 개발 착수 전, "기능 완성보다 **GitHub 기반의 협업 시스템을 설계·운영·검증하는 경험**을 최우선 가치로 둔다"는 원칙에 합의했습니다.
 
 ---
@@ -152,20 +152,20 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
 
 ---
 
-## 1.1 협업 방식 및 GitHub 운영 원칙
+# 협업 방식 및 GitHub 운영 원칙 명문화 (Github Wiki)
 
 이 프로젝트는 결과물 자체보다 **협업 과정과 개발 시스템을 학습·정착하는 것**을 핵심 목표로 한다.
 이를 위해 GitHub 커뮤니티 표준을 기준으로 협업 규칙을 수립하고, 실제 팀 협업에 맞게 내부 가이드를 정리했다.
 
 > 본 저장소의 협업 체계는 다음 세 가지 (1.1.1~3) 축으로 구성된다.
 
-### 1.1.1 협업 기준 수립
+### 협업 기준 수립
 
 * 모든 작업은 **투명한 의사소통**, **재현 가능한 워크플로우**, **일관된 기준**을 전제로 진행한다.
 * 개인 숙련도 차이로 인한 혼선을 줄이기 위해, “잘 아는 사람 기준”이 아닌 **팀 공통 기준**을 명문화한다.
 * GitHub 커뮤니티 표준(행동 강령, PR·리뷰 문화, 브랜치 보호 개념)을 내부 협업 규칙의 기반으로 삼는다.
 
-### 1.1.2 프로젝트 협업 가이드 (핵심 기준)
+### 프로젝트 협업 가이드 (핵심 기준)
 
 실질적인 협업 기준은 **브랜치 전략, 커밋 규칙, PR 흐름**에 집중되어 있으며, 이는 팀 내부 합의를 통해 결정된다.
 
@@ -220,11 +220,11 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
 * 사용 가이드(참고): Wiki → [git 명령어 정리 / GitHub Projects 및 Issue PR사용 가이드](https://github.com/open-market-project/open-market-project/wiki/GitHub-Projects-%EB%B0%8F-Issue---PR-%EC%82%AC%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C)
 
 
-## 2. 실제 적용된 협업 구조 아키텍처
+# 실제 적용된 협업 구조 아키텍처
 
 ---
 
-### 2.1. Repository Architecture
+## Repository Architecture
 
 ```mermaid
 flowchart TD
@@ -310,7 +310,7 @@ flowchart TD
 
 ---
 
-### 2.1.1 Branch Workflow
+## Branch Workflow
 
 > 본 프로젝트는 코드의 안정성과 협업 효율을 위해 아래의 브랜치 워크플로우를 따릅니다. 모든 작업은 **원본 레포지토리의 `develop` 브랜치**를 기준으로 진행됩니다.
 
@@ -510,7 +510,7 @@ git push origin feature/issue-1
 
 ---
 
-### 2.1.2 Branch Naming Convention
+### Branch Naming Convention
 
 > 브랜치 이름은 프로젝트의 일관성을 위해 아래의 형식을 따릅니다.
 
@@ -532,7 +532,7 @@ git push origin feature/issue-1
 
 > **Note:** 각 브랜치는 반드시 명확한 **Parent 브랜치**에서 생성해야 하며, 작업 완료 후 해당 Parent 브랜치로 PR을 보냅니다.
 
-### 2.1.3 브랜치 타입 정의
+### 브랜치 타입 정의
 
 | 타입 (Type) | 설명 | 예시 |
 | --- | --- | --- |
@@ -547,7 +547,7 @@ git push origin feature/issue-1
 
 ---
 
-### 2.2 커밋 컨벤션 (Commit Convention)
+### 커밋 컨벤션 (Commit Convention)
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -582,7 +582,7 @@ Type: 요약 내용 (#이슈번호)
 
 ---
 
-### 1.3 이슈 기반 작업 관리
+### 이슈 기반 작업 관리
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -604,7 +604,7 @@ Type: 요약 내용 (#이슈번호)
 
 ---
 
-### 1.4 코드 리뷰 프로세스
+### 코드 리뷰 프로세스
 
 ```mermaid
 graph TD
@@ -715,9 +715,9 @@ graph TD
 
 ---
 
-## 2. 프로젝트 개요
+# 프로젝트 개요
 
-### 2.1 프로젝트 목표와 범위
+### 프로젝트 목표와 범위
 
 <!-- 세개의 병렬 이미지로 넣기  figure/figurecaption-->
 
@@ -728,7 +728,7 @@ graph TD
 
 ---
 
-### 2.2 핵심 기능
+### 핵심 기능
 
 <!--각 실제 페이지 캡쳐 / gif로 만들기-->
 
@@ -888,7 +888,7 @@ graph LR
 
 
 
-## 2. 상품 브라우징 (Product)
+### 상품 브라우징 (Product)
 
 > 상품 정보를 탐색하고 상세 내용을 확인하는 영역입니다.
 
@@ -983,7 +983,7 @@ graph LR
 
 
 
-## 3. 공통 컴포넌트 (Common)
+### 공통 컴포넌트 (Common)
 
 > 전체 페이지에서 일관된 UX를 제공하기 위한 공통 요소입니다.
 
@@ -1219,9 +1219,9 @@ gantt
 
 ---
 
-## 4. 개발 환경 및 배포
+# 개발 환경 및 배포
 
-### 4.1 개발 환경
+### 개발 환경
 
 <!--figcaption -->
 * Language: HTML, CSS, Vanilla JavaScript
@@ -1230,7 +1230,7 @@ gantt
 
 ---
 
-### 4.2 배포 정보
+### 배포 정보
 
 * **배포 URL:**
 > **Note:** > - GitHub Pages는 서버 사이드 라우팅을 지원하지 않으므로 URL 경로는 물리적 디렉토리 구조를 따릅니다.
@@ -1254,7 +1254,7 @@ gantt
 
 ---
 
-## 5. 프로젝트 구조
+### 프로젝트 구조
 
 ```
 root
@@ -1308,7 +1308,7 @@ root
 ---
 
 
-## 검수 절차
+# 검수 절차
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -1399,7 +1399,7 @@ Lighthouse를 활용해 산출물의 품질을 자동 검수했다.
 성능, 접근성, SEO, 베스트 프랙티스 기준으로 권고사항을 도출했다.
 권고사항을 반영해 개선 작업을 수행하고 품질을 향상시켰다.
 
-## 6. 협업 중심 트러블슈팅
+# 협업 중심 트러블슈팅
 
 > 오가니제이션 원본 레포지토리 develop 브랜치 직접 push 이슈
 ```mermaid
@@ -1459,6 +1459,7 @@ graph LR
 로컬 워크스테이션에서 merge, pull, push 명령이 “어떤 로컬 브랜치를 기준으로 실행되는지”에 대한 이해가 부족하여, 의도한 변경 사항이 fork 레포지토리에 반영되지 않거나 예상과 다른 브랜치에 반영되는 문제가 발생하였다.
 
 이를 계기로 모든 Git 작업 전 현재 체크아웃된 로컬 브랜치를 명시적으로 확인하는 절차를 팀 공통 습관으로 정착시켰다.
+<<<<<<< HEAD
 
 ---
 
@@ -1582,11 +1583,139 @@ graph LR
 ```
 로컬 워크스테이션에 fork 레포지토리를 등록하는 과정에서, 표준 명칭인 origin이 아닌 오타(orgin)로 원격 저장소를 등록하여 Git Flow 기반 명령어 실행이 정상적으로 동작하지 않는 문제가 발생하였다.
 이를 통해 원격 저장소 명명 규칙의 중요성을 인지하였고, origin(개인 fork) / upstream(오가니제이션 레포) 구조를 모든 팀원이 동일하게 유지하도록 가이드라인을 통일하였다.
+=======
+>>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
 
 ---
 
-## 7. 협업 회고
+> Pull Request 대상 브랜치 설정 오류
+```mermaid
+graph LR
+    subgraph Problem [잘못된 흐름: Default Branch 설정 오류]
+        direction LR
+        F1[origin / feature/*] -- "PR 생성" --> PR1{base: upstream/main}
+        PR1 -- "병합 시도" --> M1[upstream / main]
+        M1 -.-> Error[" 배포 브랜치에 미검증 코드 유입"]
+    end
 
+<<<<<<< HEAD
+=======
+    subgraph Solution [정상 흐름: GitFlow 준수]
+        direction LR
+        F2[origin / feature/*] -- "PR 생성" --> PR2{base: upstream/develop}
+        PR2 -- "검수 후 병합" --> D2[upstream / develop]
+        D2 -- "릴리즈 준비 완료 시" --> M2[upstream / main]
+    end
+
+    %% 스타일 설정
+    style Problem fill:#fff5f5,stroke:#ff8a8a
+    style Solution fill:#f0f9ff,stroke:#0ea5e9
+    style PR1 fill:#ffffff,stroke:#ff0000
+    style PR2 fill:#ffffff,stroke:#007bff
+```
+Pull Request 생성 시, 목적지(base)를 오가니제이션 레포지토리의 develop 브랜치가 아닌 main 브랜치로 설정하는 실수가 반복적으로 발생하였다.
+
+이 문제를 통해 GitHub의 default branch 개념과 PR 생성 시 base/compare의 의미를 재정비하였으며, default branch 변경 방법과 PR 생성 전 대상 브랜치 검증 절차를 문서화하였다.
+
+---
+
+> 작업 전 upstream 동기화 누락으로 인한 Git Flow 붕괴
+```mermaid
+graph LR
+    subgraph Bad_Flow [잘못된 흐름: 기준선 붕괴]
+        direction LR
+        U1[Upstream / develop <br/>신규 커밋 존재] -- "동기화 누락" -.- L1[Local / develop <br/>과거 상태 유지]
+        L1 --> F1[Local / feature/* <br/>오래된 코드 기준 생성]
+        F1 -- "작업 후 Push" --> P1{PR 생성}
+        P1 -- "Base와 대조" --> ERR[" 대규모 충돌 및 로직 불일치"]
+    end
+
+    subgraph Good_Flow [정상 흐름: 기준선 동기화]
+        direction LR
+        U2[Upstream / develop <br/>최신 상태] -- "1. fetch / merge" --> L2[Local / develop <br/>최신화 완료]
+        L2 -- "2. 브랜치 생성" --> F2[Local / feature/* <br/>최신 코드 기준 출발]
+        F2 -- "3. 작업 완료" --> P2{4. PR 생성}
+        P2 -- "검토 후" --> OK[" 깔끔한 병합"]
+    end
+
+    %% 스타일 설정
+    style Bad_Flow fill:#fff5f5,stroke:#ff8a8a
+    style Good_Flow fill:#f0f9ff,stroke:#0ea5e9
+    style ERR color:#ff0000, font-weight:bold
+    style L2 font-weight:bold, stroke-width:2px
+```
+개발 작업 시작 전 오가니제이션 레포지토리의 최신 상태를 로컬 워크스테이션으로 fetch 및 merge upstream/develop 하지 않은 상태에서 작업을 진행하여, 팀 기준 코드와 개인 작업 코드 간의 흐름이 어긋나는 문제가 발생하였다.
+
+이후 모든 작업은 “작업 시작 전 upstream 동기화”를 필수 체크리스트로 포함하도록 프로세스를 수정하였다.
+
+해당 문제는 push 이전 단계에서 발견되어 커밋을 되돌리는 방식으로 조치하였으며, 이후 로컬 작업 기준 브랜치를 명확히 develop으로 고정하는 규칙을 확립하였다.
+
+---
+
+> 잘못된 기준 브랜치(main) 기반 작업 사례
+```mermaid
+graph LR
+    subgraph Problem [잘못된 흐름: main 기준 분기]
+        direction LR
+        M1[Upstream / main <br/>배포 안정 상태] -- "잘못된 출발점" --> F1[Local / feature/* <br/>개발 코드 누락]
+        F1 -- "오류 감지" --> RB[Rollback: reset / revert]
+        RB -- "브랜치 폐기" --> End1((종료))
+    end
+
+    subgraph Solution [정상 흐름: develop 기준 분기]
+        direction LR
+        D1[Upstream / develop <br/>개발 기준선] -- "동기화" --> LD[Local / develop]
+        LD -- "정상 분기" --> F2[Local / feature/* <br/>모든 개발 코드 포함]
+        F2 -- "작업 완료" --> PR[PR: feature → develop]
+        PR -- "병합" --> D1
+    end
+
+    %% 스타일 설정
+    style Problem fill:#fff5f5,stroke:#ff8a8a
+    style Solution fill:#f0f9ff,stroke:#0ea5e9
+    style RB fill:#ffebee,stroke:#b71c1c,color:#b71c1c
+    style LD font-weight:bold,stroke-width:2px
+```
+오가니제이션 레포지토리의 main 브랜치를 로컬에 병합한 뒤 개발 작업을 진행하여, 실제 개발 기준 브랜치인 upstream/develop과 코드 구조가 상이한 상태로 작업이 이루어졌다.
+
+해당 문제는 push 이전 단계에서 발견되어 커밋을 되돌리는 방식으로 조치하였으며, 이후 로컬 작업 기준 브랜치를 명확히 develop으로 고정하는 규칙을 확립하였다.
+
+---
+
+> 원격 레포지토리(origin) 명명 오류로 인한 Git Flow 불가
+```mermaid
+graph LR
+    subgraph Bad_Flow [잘못된 흐름: 비표준/오타 Remote]
+        direction LR
+        L1[Local Repository] -- "git remote add orgin" --> R1[Remote: orgin]
+        R1 -- "명령 실행: git push origin" --> ERR{에러 발생}
+        ERR -- "결과" --> P1[" 'origin' remote를 찾을 수 없음 <br/>(Workflow 중단)"]
+    end
+
+    subgraph Good_Flow [정상 흐름: 표준 Remote 구조]
+        direction LR
+        L2[Local Repository] -- "1. Push/PR" --> OR[origin: 개인 Fork]
+        L2 -- "2. Sync/Fetch" --> UP[upstream: 팀 원본]
+        OR -- "3. PR 생성" --> UP
+        UP -- "4. 최신화" --> L2
+        
+        style OR fill:#f0f9ff,stroke:#0ea5e9
+        style UP fill:#f0f9ff,stroke:#0ea5e9
+    end
+
+    %% 스타일 설정
+    style Bad_Flow fill:#fff5f5,stroke:#ff8a8a
+    style Good_Flow fill:#f0f9ff,stroke:#0ea5e9
+    style ERR fill:#ffebee,stroke:#b71c1c,color:#b71c1c
+```
+로컬 워크스테이션에 fork 레포지토리를 등록하는 과정에서, 표준 명칭인 origin이 아닌 오타(orgin)로 원격 저장소를 등록하여 Git Flow 기반 명령어 실행이 정상적으로 동작하지 않는 문제가 발생하였다.
+이를 통해 원격 저장소 명명 규칙의 중요성을 인지하였고, origin(개인 fork) / upstream(오가니제이션 레포) 구조를 모든 팀원이 동일하게 유지하도록 가이드라인을 통일하였다.
+
+---
+
+# 협업 회고
+
+>>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
 > Git 컨벤션 못지않은 코딩 컨벤션의 중요성
 
 <div align="center" style="margin: 30px 0;">
@@ -1654,4 +1783,7 @@ graph LR
 그럼에도 불구하고, 프로젝트 범위가 일부 조정된 이후에도 최종 목표를 성공적으로 달성할 수 있었던 핵심 요인은 명문화된 컨벤션 문서와 지속적으로 갱신된 Wiki의 존재였다.
 
 문서화는 단순한 기록이 아니라, 지식 손실을 방지하는 안전망이며 팀 생산성을 유지하는 운영 인프라이자 프로젝트 리스크를 흡수하는 핵심 자산임을 분명히 인식하게 되었다.
+<<<<<<< HEAD
 
+=======
+>>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1

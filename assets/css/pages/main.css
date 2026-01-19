@@ -1,4 +1,5 @@
 .product-section {
+
     max-width: none; 
     margin: 0 auto;
     width: 100%;
@@ -42,19 +43,19 @@
     display: block;
 }
 
-.product-info .seller {
-    margin-bottom: 1.0rem;
+.product-section .product-info .seller {
+    margin-bottom: 1.0rem !important;
     line-height: 1.2;
     font-size: var(--fs-sm); 
     color: var(--color-text-muted); 
 }
 
 .product-info .product-name {
-    margin: 0 0 1.0rem 0; 
+    margin: 1.0rem 0 1.0rem 0; 
     font-size: var(--fs-md); 
     color: var(--color-text-primary); 
-    min-height: 4.4rem;
-    height: 4.4rem; 
+    min-height: auto;
+    height: auto; 
     display: -webkit-box; 
     -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical; 
