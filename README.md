@@ -1583,8 +1583,6 @@ graph LR
 ```
 로컬 워크스테이션에 fork 레포지토리를 등록하는 과정에서, 표준 명칭인 origin이 아닌 오타(orgin)로 원격 저장소를 등록하여 Git Flow 기반 명령어 실행이 정상적으로 동작하지 않는 문제가 발생하였다.
 이를 통해 원격 저장소 명명 규칙의 중요성을 인지하였고, origin(개인 fork) / upstream(오가니제이션 레포) 구조를 모든 팀원이 동일하게 유지하도록 가이드라인을 통일하였다.
-=======
->>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
 
 ---
 
@@ -1597,9 +1595,6 @@ graph LR
         PR1 -- "병합 시도" --> M1[upstream / main]
         M1 -.-> Error[" 배포 브랜치에 미검증 코드 유입"]
     end
-
-<<<<<<< HEAD
-=======
     subgraph Solution [정상 흐름: GitFlow 준수]
         direction LR
         F2[origin / feature/*] -- "PR 생성" --> PR2{base: upstream/develop}
@@ -1718,6 +1713,20 @@ graph LR
 >>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
 > Git 컨벤션 못지않은 코딩 컨벤션의 중요성
 
+
+<div align="center" style="margin: 30px 0;">
+  <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <img src="https://github.com/user-attachments/assets/f24ef3d3-d28d-4b6d-99d9-6f2fbb830b64" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
+    <div style="margin-top: 15px; text-align: left;">
+      <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1f2328;">
+        div 최소화 원칙을 준수한 시멘틱 설계
+      </p>
+      <p style="margin: 5px 0 0; font-size: 13px; color: #636c76; line-height: 1.5;">
+      </p>
+    </div>
+  </div>
+</div>
+
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
     <img src="https://github.com/user-attachments/assets/59a649d1-2e71-42ba-8926-a5289d657225" alt="Git Branch List" width="800" style="border-radius: 6px; border: 1px solid #e1e4e8;">
@@ -1783,7 +1792,4 @@ graph LR
 그럼에도 불구하고, 프로젝트 범위가 일부 조정된 이후에도 최종 목표를 성공적으로 달성할 수 있었던 핵심 요인은 명문화된 컨벤션 문서와 지속적으로 갱신된 Wiki의 존재였다.
 
 문서화는 단순한 기록이 아니라, 지식 손실을 방지하는 안전망이며 팀 생산성을 유지하는 운영 인프라이자 프로젝트 리스크를 흡수하는 핵심 자산임을 분명히 인식하게 되었다.
-<<<<<<< HEAD
 
-=======
->>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
