@@ -12,8 +12,8 @@
 | 프로필 | 이름  | 담당 영역 | 핵심 책임 | 주요 개발 산출물 |
 | :---: | :--- | :--- | :--- | :--- |
 | <img src="https://github.com/user-attachments/assets/8bc730e8-2ec9-447f-8e16-939cb0f73f20" width="100" height="120" style="object-fit: cover;"> |**이&nbsp;현&nbsp;규** | Core Logic | Development Coordination, 검수, README, Detail, Emotional Support, 상품 단위 핵심 비즈니스 로직 구현 | 상품 상세 UI, API 데이터 바인딩, 실시간 가격/수량 계산 로직, README 작성 |
-| <img src="https://github.com/user-attachments/assets/c545fab1-2e81-4e10-b1b0-419ca23b294f" width="100" height="120" style="object-fit: cover;"> | **조&nbsp;서&nbsp;연** | Foundation | Git, 초기개발구조 세팅, 인증 시스템 총괄 및 프로젝트 베이스라인 구축 | 초기 구조 설계, CSS 변수/리셋, 배포 환경 구축, auth.js 기반 인증 로직 및 UI |
-| <img src="https://github.com/user-attachments/assets/eab93b89-329d-450c-aaef-8213bf5f1cc0" width="100" height="120" style="object-fit: cover;"> | **강&nbsp;수&nbsp;민** | UX & QA / Layout | Gitflow, Componrnt, APi, 전역 레이아웃 및 인터랙션 일관성 확보 | GNB(검색)·Footer, 상품 목록 UI, 마이페이지, 전사 QA 및 시연 자료 제작 |
+| <img src="https://github.com/user-attachments/assets/c545fab1-2e81-4e10-b1b0-419ca23b294f" width="100" height="120" style="object-fit: cover;"> | **조&nbsp;서&nbsp;연** | Foundation | Technical Lead, Git 및 초기개발구조 세팅, 인증 시스템 총괄 및 프로젝트 베이스라인 구축 | 초기 구조 설계, CSS 변수/리셋, 배포 환경 구축, auth.js 기반 인증 로직 및 UI |
+| <img src="https://github.com/user-attachments/assets/eab93b89-329d-450c-aaef-8213bf5f1cc0" width="100" height="120" style="object-fit: cover;"> | **강&nbsp;수&nbsp;민** | UX & QA / Layout | Engineering Standards Lead, Gitflow, Componrnt, APi, 전역 레이아웃 및 인터랙션 일관성 확보 | GNB(검색)·Footer, 상품 목록 UI, 마이페이지, 전사 QA 및 시연 자료 제작 |
 
 > **Note:** 기존 팀원 B의 중도 하차로 인해, 해당 담당 역할(Layout 및 메인 화면 등)은 팀원 강수민 님이 전담하여 완수하였습니다.
 
