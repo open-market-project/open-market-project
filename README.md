@@ -18,7 +18,7 @@
 > **Note:** 기존 팀원 B의 중도 하차로 인해, 해당 담당 역할(Layout 및 메인 화면 등)은 팀원 강수민 님이 전담하여 완수하였습니다.
 
 ---
-## 협업 및 프로젝트 관리 (Collaboration & Process)
+# 프로젝트 관리 (Collaboration & Process)
 
 ```mermaid
 graph TD
