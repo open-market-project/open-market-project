@@ -1474,14 +1474,14 @@ graph LR
 > Pull Request 대상 브랜치 설정 오류
 ```mermaid
 graph LR
-    subgraph Problem [잘못된 흐름: Default Branch 설정 오류]
+    subgraph Problem ["잘못된 흐름: Default Branch 설정 오류"]
         direction LR
         F1[origin / feature/*] -- "PR 생성" --> PR1{base: upstream/main}
         PR1 -- "병합 시도" --> M1[upstream / main]
-        M1 -.-> Error[" 배포 브랜치에 미검증 코드 유입"]
+        M1 -.-> Error["배포 브랜치에 미검증 코드 유입"]
     end
 
-    subgraph Solution [정상 흐름: GitFlow 준수]
+    subgraph Solution ["정상 흐름: GitFlow 준수"]
         direction LR
         F2[origin / feature/*] -- "PR 생성" --> PR2{base: upstream/develop}
         PR2 -- "검수 후 병합" --> D2[upstream / develop]
@@ -1493,6 +1493,7 @@ graph LR
     style Solution fill:#f0f9ff,stroke:#0ea5e9
     style PR1 fill:#ffffff,stroke:#ff0000
     style PR2 fill:#ffffff,stroke:#007bff
+
 ```
 Pull Request 생성 시, 목적지(base)를 오가니제이션 레포지토리의 develop 브랜치가 아닌 main 브랜치로 설정하는 실수가 반복적으로 발생하였다.
 
@@ -1718,7 +1719,6 @@ graph LR
 
 # 협업 회고
 
->>>>>>> e66575be5b8e2e7204fa26a767e9673542c649a1
 > Git 컨벤션 못지않은 코딩 컨벤션의 중요성
 
 
