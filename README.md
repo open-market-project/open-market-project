@@ -220,11 +220,11 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
 * 사용 가이드(참고): Wiki → [git 명령어 정리 / GitHub Projects 및 Issue PR사용 가이드](https://github.com/open-market-project/open-market-project/wiki/GitHub-Projects-%EB%B0%8F-Issue---PR-%EC%82%AC%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C)
 
 
-## 2. 실제 적용된 협업 구조 아키텍처
+# 실제 적용된 협업 구조 아키텍처
 
 ---
 
-### 2.1. Repository Architecture
+## Repository Architecture
 
 ```mermaid
 flowchart TD
@@ -310,7 +310,7 @@ flowchart TD
 
 ---
 
-### 2.1.1 Branch Workflow
+## Branch Workflow
 
 > 본 프로젝트는 코드의 안정성과 협업 효율을 위해 아래의 브랜치 워크플로우를 따릅니다. 모든 작업은 **원본 레포지토리의 `develop` 브랜치**를 기준으로 진행됩니다.
 
@@ -510,7 +510,7 @@ git push origin feature/issue-1
 
 ---
 
-### 2.1.2 Branch Naming Convention
+### Branch Naming Convention
 
 > 브랜치 이름은 프로젝트의 일관성을 위해 아래의 형식을 따릅니다.
 
@@ -532,7 +532,7 @@ git push origin feature/issue-1
 
 > **Note:** 각 브랜치는 반드시 명확한 **Parent 브랜치**에서 생성해야 하며, 작업 완료 후 해당 Parent 브랜치로 PR을 보냅니다.
 
-### 2.1.3 브랜치 타입 정의
+### 브랜치 타입 정의
 
 | 타입 (Type) | 설명 | 예시 |
 | --- | --- | --- |
@@ -547,7 +547,7 @@ git push origin feature/issue-1
 
 ---
 
-### 2.2 커밋 컨벤션 (Commit Convention)
+### 커밋 컨벤션 (Commit Convention)
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -582,7 +582,7 @@ Type: 요약 내용 (#이슈번호)
 
 ---
 
-### 1.3 이슈 기반 작업 관리
+### 이슈 기반 작업 관리
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -604,7 +604,7 @@ Type: 요약 내용 (#이슈번호)
 
 ---
 
-### 1.4 코드 리뷰 프로세스
+### 코드 리뷰 프로세스
 
 ```mermaid
 graph TD
@@ -715,9 +715,9 @@ graph TD
 
 ---
 
-## 2. 프로젝트 개요
+# 프로젝트 개요
 
-### 2.1 프로젝트 목표와 범위
+### 프로젝트 목표와 범위
 
 <!-- 세개의 병렬 이미지로 넣기  figure/figurecaption-->
 
@@ -728,7 +728,7 @@ graph TD
 
 ---
 
-### 2.2 핵심 기능
+### 핵심 기능
 
 <!--각 실제 페이지 캡쳐 / gif로 만들기-->
 
@@ -888,7 +888,7 @@ graph LR
 
 
 
-## 2. 상품 브라우징 (Product)
+### 상품 브라우징 (Product)
 
 > 상품 정보를 탐색하고 상세 내용을 확인하는 영역입니다.
 
@@ -983,7 +983,7 @@ graph LR
 
 
 
-## 3. 공통 컴포넌트 (Common)
+### 공통 컴포넌트 (Common)
 
 > 전체 페이지에서 일관된 UX를 제공하기 위한 공통 요소입니다.
 
@@ -1219,9 +1219,9 @@ gantt
 
 ---
 
-## 4. 개발 환경 및 배포
+# 개발 환경 및 배포
 
-### 4.1 개발 환경
+### 개발 환경
 
 <!--figcaption -->
 * Language: HTML, CSS, Vanilla JavaScript
@@ -1230,7 +1230,7 @@ gantt
 
 ---
 
-### 4.2 배포 정보
+### 배포 정보
 
 * **배포 URL:**
 > **Note:** > - GitHub Pages는 서버 사이드 라우팅을 지원하지 않으므로 URL 경로는 물리적 디렉토리 구조를 따릅니다.
@@ -1254,7 +1254,7 @@ gantt
 
 ---
 
-## 5. 프로젝트 구조
+### 프로젝트 구조
 
 ```
 root
@@ -1308,7 +1308,7 @@ root
 ---
 
 
-## 검수 절차
+# 검수 절차
 
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 20px; border: 1px solid #d0d7de; border-radius: 10px; background-color: #f6f8fa; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -1399,7 +1399,7 @@ Lighthouse를 활용해 산출물의 품질을 자동 검수했다.
 성능, 접근성, SEO, 베스트 프랙티스 기준으로 권고사항을 도출했다.
 권고사항을 반영해 개선 작업을 수행하고 품질을 향상시켰다.
 
-## 6. 협업 중심 트러블슈팅
+# 협업 중심 트러블슈팅
 
 > 오가니제이션 원본 레포지토리 develop 브랜치 직접 push 이슈
 ```mermaid
@@ -1585,7 +1585,7 @@ graph LR
 
 ---
 
-## 7. 협업 회고
+# 협업 회고
 
 > Git 컨벤션 못지않은 코딩 컨벤션의 중요성
 
