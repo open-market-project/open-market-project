@@ -112,7 +112,7 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
   </div>
 </div>
 
-## 1. 협업 프로세스  (Collaboration Process)
+# 협업 프로세스  (Collaboration Process)
 
 > 협업 시스템 설계 배경
 
