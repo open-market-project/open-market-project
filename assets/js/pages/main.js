@@ -95,7 +95,7 @@ function createProductCard(product) {
             <section class="product-info">
                 <span class="seller">${product.seller.store_name}</span>
                 <h3 class="product-name">${product.name}</h3>
-                <p class="price-box"><strong class="price">${product.price.toLocaleString()}</strong>원</p>
+                <p class="price-box"><strong class="price">${product.price.toLocaleString()}</strong></p>
             </section>
         </article>
     `;
