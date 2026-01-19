@@ -1176,7 +1176,7 @@ graph LR
 
 ---
 
-개발 일정
+### 개발 일정
 ```mermaid
 %%{init: { 'gantt': { 'barHeight': 25, 'fontSize': 12, 'sectionFontSize': 14, 'leftPadding': 160, 'gridLineStartPadding': 20 } } }%%
 gantt
