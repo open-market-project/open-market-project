@@ -206,7 +206,7 @@ Sprint Board에서 정의된 구조를 GitHub의 생태계(Issue, PR, Branch Str
 * Wiki
 <div align="center" style="margin: 30px 0;">
   <div style="display: inline-block; padding: 25px; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
-    <img src="https://github.com/user-attachments/assets/26238ec4-195d-42e2-8ce8-1f271136c54d" alt="Wiki QR Code" width="500" style="border-radius: 6px;">
+    <img src="https://github.com/user-attachments/assets/6544c356-b057-4e3f-a114-a911a9f1d7e5" alt="Wiki QR Code" width="500" style="border-radius: 6px;">
     <p style="margin-top: 20px; margin-bottom: 5px; font-size: 16px; font-weight: 600; color: #24292e;">
       위키 페이지로 바로 접속하기
     </p>
